@@ -62,7 +62,7 @@ config  →  services  →  composables  →  components  →  pages
 - **`app/utils/*`** — pure helpers (`format.ts`, `iconPaths.ts`), auto-imported.
   ⚠️ Auto-imports are global: a local `const ratio = …` would shadow
   `utils/format.ts`'s `ratio()` and fail at build time. Name locals distinctly.
-- **`i18n/locales/{id,en}.json`** — **every** visible string. 535 leaf keys.
+- **`i18n/locales/{id,en}.json`** — **every** visible string. 534 leaf keys.
 - **`server/api/__sitemap__/urls.ts`** — dynamic sitemap entries for unit pages.
 
 ## 4. Styling rules

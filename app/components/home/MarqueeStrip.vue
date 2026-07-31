@@ -9,7 +9,9 @@ const strip = computed(() => [...makes.value, ...makes.value])
 </script>
 
 <template>
-  <div class="marquee" role="marquee" :aria-label="$t('home.marquee.label')">
+  <!-- Decorative: the same marques are listed accessibly in the inventory, and
+       role="marquee" would turn this into a live region that keeps announcing. -->
+  <div class="marquee" aria-hidden="true">
     <div class="marquee__track">
       <span v-for="(make, index) in strip" :key="`${make}-${index}`" class="marquee__item">
         {{ make }}
