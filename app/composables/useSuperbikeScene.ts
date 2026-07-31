@@ -232,8 +232,8 @@ export function useSuperbikeScene(): SceneHandle {
     // Front end ---------------------------------------------------------------
     for (const z of offsets.forks) group.add(tubePart(t, parts.fork, metal, z))
 
+    // The bar runs across the bike, so it is rotated about x, not z.
     const bar = tubePart(t, parts.handlebar, dark)
-    bar.rotation.z = 0
     bar.rotation.x = Math.PI / 2
     group.add(bar)
 
@@ -253,8 +253,8 @@ export function useSuperbikeScene(): SceneHandle {
       child.receiveShadow = false
     })
 
-    // Sit the machine on the floor and give it a light lean into the turntable.
-    group.rotation.z = -0.02
+    // No cosmetic lean: the wheels are positioned to touch y = 0 exactly, and
+    // rotating the group would push one contact patch through the floor.
     return group
   }
 
@@ -341,7 +341,8 @@ export function useSuperbikeScene(): SceneHandle {
       renderer.toneMappingExposure = 1.06
 
       scene = new t.Scene()
-      scene.fog = new t.Fog(0x06070a, 4.2, 11)
+      // Fog starts beyond the machine so only the floor edges fade out.
+      scene.fog = new t.Fog(0x06070a, 6.5, 13)
 
       const view = bikeModel.camera
       camera = new t.PerspectiveCamera(view.fov, width / height, 0.1, 60)
