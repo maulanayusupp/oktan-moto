@@ -1,0 +1,9 @@
+// =============================================================================
+// Side-effect-free SCSS (variables + mixins only — NO CSS output). Injected
+// into every component's <style lang="scss"> via nuxt.config
+// `vite.css.preprocessorOptions.scss.additionalData`.
+//
+// Never put real rules here: they would be duplicated into every stylesheet.
+// =============================================================================
+@forward 'variables';
+@forward 'mixins';

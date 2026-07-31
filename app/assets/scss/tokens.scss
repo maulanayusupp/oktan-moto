@@ -1,0 +1,48 @@
+// =============================================================================
+// Runtime design tokens: the Sass palette re-published as CSS custom properties.
+// Components style themselves with the Sass variables; these exist for the few
+// places that need values at runtime (WebGL livery colours, canvas telemetry,
+// custom-property pass-through via :style, e.g. staggered reveal delays).
+// =============================================================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+:root {
+  // Surfaces
+  --c-carbon-950: #{$carbon-950};
+  --c-carbon-900: #{$carbon-900};
+  --c-carbon-850: #{$carbon-850};
+  --c-carbon-800: #{$carbon-800};
+  --c-carbon-700: #{$carbon-700};
+  --c-carbon-600: #{$carbon-600};
+
+  // Ink
+  --c-chalk: #{$chalk};
+  --c-titanium: #{$titanium};
+  --c-steel: #{$steel};
+
+  // Accents
+  --c-ignition: #{$ignition};
+  --c-ignition-deep: #{$ignition-deep};
+  --c-volt: #{$volt};
+  --c-coolant: #{$coolant};
+
+  // Layout
+  --container: #{$container};
+  --header-h: 68px;
+
+  // Motion
+  --ease-out: #{$ease-out};
+  --dur-base: #{$dur-base};
+
+  // Per-element reveal delay, set through :style="{ '--reveal-delay': … }".
+  --reveal-delay: 0ms;
+
+  color-scheme: dark;
+}
+
+@include from($bp-md) {
+  :root {
+    --header-h: 82px;
+  }
+}

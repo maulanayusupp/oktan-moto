@@ -1,0 +1,121 @@
+// =============================================================================
+// Type system. Fluid scale via clamp() so headlines stay proportional from
+// 360px phones to 1600px displays without breakpoint-by-breakpoint overrides.
+// Display face (Chakra Petch) carries all headings, numbers and labels; body
+// face (Sora) carries prose.
+// =============================================================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+html {
+  font-family: $font-body;
+  font-size: 100%;
+  line-height: 1.65;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: $font-display;
+  font-weight: $fw-bold;
+  line-height: 1.06;
+  letter-spacing: -0.01em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(2.4rem, 6.2vw, 4.6rem);
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: clamp(1.9rem, 4vw, 3rem);
+  text-transform: uppercase;
+}
+
+h3 {
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+}
+
+h4 {
+  font-size: 1.06rem;
+  letter-spacing: 0.01em;
+}
+
+h5 {
+  font-size: 0.94rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+small {
+  font-size: 0.82rem;
+}
+
+strong,
+b {
+  font-weight: $fw-semibold;
+  color: $chalk;
+}
+
+// --- Shared prose block (legal pages, long-form sections) ---------------------
+.prose {
+  color: $titanium;
+  font-size: 1rem;
+  max-width: 72ch;
+
+  h2,
+  h3 {
+    color: $chalk;
+    margin-block: $space-6 $space-3;
+  }
+
+  h2 {
+    font-size: clamp(1.35rem, 2.4vw, 1.8rem);
+  }
+
+  h3 {
+    font-size: 1.12rem;
+  }
+
+  p,
+  li {
+    margin-bottom: $space-3;
+  }
+
+  ul,
+  ol {
+    padding-left: $space-5;
+    margin-bottom: $space-4;
+  }
+
+  li::marker {
+    color: $ignition;
+  }
+
+  a {
+    color: $chalk;
+    border-bottom: 1px solid rgba($ignition, 0.6);
+    transition: color $dur-fast $ease-out;
+
+    @include hover {
+      color: $ignition;
+    }
+
+    @include focus-visible;
+  }
+
+  code {
+    font-family: $font-display;
+    font-size: 0.9em;
+    background: $carbon-800;
+    padding: 0.1em 0.4em;
+    border-radius: $radius-xs;
+  }
+}

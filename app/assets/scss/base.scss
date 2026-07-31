@@ -1,0 +1,125 @@
+// =============================================================================
+// Global base layer: page chrome, layout primitives and the handful of global
+// classes that several components share (container, section, eyebrow, reveal).
+// Component-specific rules stay in the component's scoped <style> block.
+// =============================================================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+body {
+  background-color: $carbon-950;
+  color: $chalk;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba($ignition, 0.9);
+  color: #fff;
+}
+
+// --- Layout primitives --------------------------------------------------------
+.container {
+  @include container;
+}
+
+.container--wide {
+  @include container($container-wide);
+}
+
+.container--narrow {
+  @include container($container-narrow);
+}
+
+.section {
+  @include section-padding;
+  position: relative;
+}
+
+.section--raised {
+  background: $carbon-900;
+}
+
+.section--grid::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  @include tarmac-grid;
+  mask-image: radial-gradient(ellipse at 50% 0%, #000 0%, transparent 72%);
+  pointer-events: none;
+}
+
+// --- Small shared type helpers -----------------------------------------------
+.eyebrow {
+  @include eyebrow;
+  display: inline-flex;
+  align-items: center;
+  gap: $space-2;
+
+  &::before {
+    content: '';
+    width: 22px;
+    height: 1px;
+    background: $ignition;
+  }
+}
+
+.numeric {
+  @include numeric;
+}
+
+// --- Accessibility ------------------------------------------------------------
+.skip-link {
+  position: absolute;
+  top: $space-2;
+  left: $space-2;
+  z-index: $z-toast;
+  padding: $space-2 $space-4;
+  background: $ignition;
+  color: #fff;
+  font-family: $font-display;
+  font-weight: $fw-semibold;
+  border-radius: $radius-sm;
+  transform: translateY(-200%);
+  transition: transform $dur-fast $ease-out;
+
+  &:focus {
+    transform: translateY(0);
+  }
+}
+
+.visually-hidden {
+  @include visually-hidden;
+}
+
+// --- Scroll-reveal (driven by useReveal) --------------------------------------
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity $dur-slow $ease-out var(--reveal-delay, 0ms),
+    transform $dur-slow $ease-out var(--reveal-delay, 0ms);
+  will-change: opacity, transform;
+}
+
+.reveal--in {
+  opacity: 1;
+  transform: none;
+}
+
+@include reduced-motion {
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+// --- Page-level main ----------------------------------------------------------
+.layout__main {
+  flex: 1;
+  padding-top: var(--header-h);
+}
+
+// Pages whose hero sits under the transparent header opt out of the offset.
+.layout__main--flush {
+  padding-top: 0;
+}

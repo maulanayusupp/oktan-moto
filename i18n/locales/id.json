@@ -1,0 +1,893 @@
+{
+  "meta": {
+    "tagline": "Galeri Motor Sport Baru & Bekas",
+    "description": "OKTAN adalah galeri motor sport baru dan bekas pilihan di Jakarta Selatan. Unit diperiksa, riwayat dicatat, harga terbuka, dan konsultasi langsung lewat WhatsApp."
+  },
+  "common": {
+    "demoShort": "Situs demo: nama showroom, unit, harga, dan riwayat pada halaman ini adalah data contoh.",
+    "demoNotice": "OKTAN adalah showroom contoh untuk keperluan demonstrasi. Unit, harga, kilometer, dan riwayat kepemilikan adalah data ilustratif, bukan stok yang benar-benar dijual."
+  },
+  "a11y": {
+    "skipToContent": "Lewati ke konten utama",
+    "home": "OKTAN — kembali ke beranda",
+    "primaryNav": "Navigasi utama",
+    "footerNav": "Navigasi footer",
+    "legalNav": "Navigasi dokumen legal",
+    "openMenu": "Buka menu",
+    "closeMenu": "Tutup menu",
+    "languageSwitcher": "Pilih bahasa",
+    "breadcrumb": "Jejak navigasi"
+  },
+  "nav": {
+    "home": "Beranda",
+    "inventory": "Koleksi",
+    "about": "Tentang",
+    "contact": "Kontak",
+    "compliance": "Kepatuhan",
+    "privacy": "Privasi",
+    "terms": "Ketentuan",
+    "credits": "Kredit Foto"
+  },
+  "cta": {
+    "whatsapp": "WhatsApp",
+    "whatsappLong": "Konsultasi via WhatsApp",
+    "viewUnit": "Lihat unit",
+    "browseInventory": "Lihat koleksi",
+    "talkToUs": "Tanya dulu",
+    "seeAll": "Semua unit",
+    "aboutUs": "Tentang kami",
+    "askAboutUnit": "Tanya unit ini",
+    "emailUs": "Kirim email",
+    "visitShowroom": "Jadwal kunjungan",
+    "band": {
+      "eyebrow": "Langkah berikutnya",
+      "title": "Ada unit yang menarik? Tanyakan sebelum orang lain",
+      "lead": "Kirim satu pesan, kami balas dengan kondisi terkini, hasil pemeriksaan, dan rincian biaya. Tanpa kewajiban membeli."
+    }
+  },
+  "condition": {
+    "new": "Baru",
+    "used": "Bekas"
+  },
+  "category": {
+    "supersport": "Supersport",
+    "naked": "Naked",
+    "sport-touring": "Sport Touring",
+    "heritage": "Heritage"
+  },
+  "colors": {
+    "rossoCorsa": "Rosso Corsa",
+    "lightWhiteMsport": "Light White / Motorsport",
+    "grandPrixTricolour": "Grand Prix Tricolour",
+    "teamYamahaBlue": "Team Yamaha Blue",
+    "limeGreenEbony": "Lime Green / Ebony",
+    "nardoMatt": "Abu Matt",
+    "orangeWhite": "Oranye / Putih",
+    "cyanStorm": "Cyan Storm",
+    "rossoAgo": "Rosso Ago",
+    "phantomBlack": "Phantom Black",
+    "candytoneOrange": "Candytone Orange",
+    "auroraBlack": "Aurora Black"
+  },
+  "spec": {
+    "power": "Tenaga",
+    "ptw": "Tenaga per bobot",
+    "displacement": "Kapasitas mesin",
+    "weight": "Bobot isi",
+    "year": "Tahun",
+    "engine": "Konfigurasi mesin",
+    "torque": "Torsi",
+    "colour": "Warna",
+    "mileage": "Kilometer",
+    "condition": "Kondisi",
+    "priceExact": "Harga",
+    "owners": "Jumlah pemilik",
+    "serviceHistory": "Riwayat servis",
+    "taxValid": "Pajak berlaku sampai",
+    "layout": {
+      "v4": "V4, 4 tak",
+      "inline4": "4 silinder sejajar",
+      "crossplane4": "4 silinder crossplane",
+      "vTwin": "V-twin",
+      "triple": "3 silinder sejajar"
+    },
+    "history": {
+      "full": "Lengkap",
+      "partial": "Sebagian",
+      "unknown": "Belum terverifikasi"
+    }
+  },
+  "e": {
+    "imu": "Sensor IMU 6 arah",
+    "abs": "ABS",
+    "corneringAbs": "Cornering ABS",
+    "tractionControl": "Kontrol traksi",
+    "wheelieControl": "Kontrol wheelie",
+    "slideControl": "Kontrol slide",
+    "quickshifter": "Quickshifter naik-turun",
+    "launchControl": "Launch control",
+    "engineBrakeControl": "Pengaturan engine brake",
+    "rideModes": "Mode berkendara",
+    "cruiseControl": "Cruise control",
+    "semiActiveSuspension": "Suspensi semi-aktif",
+    "radarAcc": "Cruise control adaptif radar",
+    "hillHoldControl": "Hill hold control",
+    "slipperClutch": "Kopling slipper"
+  },
+  "f": {
+    "aeroWinglets": "Winglet aerodinamis",
+    "ohlinsSuspension": "Suspensi Öhlins",
+    "wpSuspension": "Suspensi WP",
+    "marzocchiSuspension": "Suspensi Marzocchi",
+    "dryClutch": "Kopling kering",
+    "serviceBook": "Buku servis tersedia",
+    "forgedWheels": "Pelek tempa",
+    "magnesiumWheels": "Pelek magnesium",
+    "spinForgedWheels": "Pelek SpinForged",
+    "tftDash": "Panel TFT berwarna",
+    "ledLighting": "Lampu LED penuh",
+    "oemToolkit": "Toolkit standar lengkap",
+    "brembo": "Kaliper Brembo",
+    "titaniumSilencer": "Silencer titanium",
+    "akrapovicExhaust": "Knalpot Akrapovič",
+    "arrowExhaust": "Knalpot Arrow",
+    "tyresNew": "Ban baru",
+    "frameSliders": "Frame slider terpasang",
+    "tailTidy": "Tail tidy",
+    "paddockStand": "Paddock stand disertakan",
+    "originalPaint": "Cat orisinal",
+    "singleOwner": "Pemilik pertama",
+    "touringScreen": "Windshield touring",
+    "heatedGrips": "Grip penghangat",
+    "panniersReady": "Dudukan pannier siap"
+  },
+  "inventory": {
+    "priceNote": "Harga unit, sebelum biaya mutasi",
+    "zeroKm": "Baru, 0 km",
+    "empty": "Tidak ada unit yang cocok dengan filter ini. Coba longgarkan pencarian.",
+    "resultCount": "{count} unit ditampilkan",
+    "sortLabel": "Urutkan",
+    "sort": {
+      "featured": "Pilihan kami",
+      "price-asc": "Harga termurah",
+      "price-desc": "Harga tertinggi",
+      "power-desc": "Tenaga terbesar",
+      "year-desc": "Tahun terbaru",
+      "cc-desc": "Kapasitas terbesar"
+    },
+    "filters": {
+      "searchLabel": "Cari unit",
+      "searchPlaceholder": "Cari merek, model, atau tahun",
+      "conditionLabel": "Kondisi unit",
+      "categoryLabel": "Kategori unit",
+      "all": "Semua",
+      "allCategories": "Semua kategori",
+      "priceLabel": "Batas harga",
+      "anyPrice": "Semua harga",
+      "under": "Di bawah {price}",
+      "ccLabel": "Kapasitas mesin",
+      "anyCc": "Semua kapasitas",
+      "fromCc": "Dari {cc} cc",
+      "reset": "Reset {count} filter"
+    },
+    "stats": {
+      "total": "Unit tayang",
+      "new": "Unit baru",
+      "used": "Unit bekas"
+    },
+    "meta": {
+      "title": "Koleksi motor sport baru & bekas",
+      "description": "Jelajahi 12 unit contoh: supersport, naked, sport touring, dan heritage. Filter berdasarkan kondisi, kategori, harga, dan kapasitas mesin."
+    },
+    "hero": {
+      "eyebrow": "Koleksi",
+      "title": "Dua belas mesin, satu standar pemeriksaan",
+      "lead": "Bandingkan spesifikasi, kilometer, dan harga secara berdampingan. Tandai maksimal tiga unit untuk dibandingkan, lalu lanjutkan lewat WhatsApp."
+    }
+  },
+  "compare": {
+    "title": "Bandingkan",
+    "add": "Bandingkan unit",
+    "remove": "Hapus dari perbandingan",
+    "removeUnit": "Hapus {unit} dari perbandingan",
+    "full": "Maksimal tiga unit sekaligus",
+    "clear": "Kosongkan",
+    "ask": "Tanya semua",
+    "inTray": "Ada di perbandingan",
+    "spec": "Spesifikasi",
+    "tableCaption": "Perbandingan spesifikasi unit yang dipilih",
+    "note": "Angka yang disorot adalah nilai terbaik pada baris tersebut. Bobot memakai angka isi (kerb) dari pabrikan.",
+    "rows": {
+      "price": "Harga",
+      "power": "Tenaga",
+      "torque": "Torsi",
+      "weight": "Bobot",
+      "ptw": "Tenaga per ton",
+      "cc": "Kapasitas",
+      "year": "Tahun",
+      "mileage": "Kilometer"
+    }
+  },
+  "unit": {
+    "meta": {
+      "title": "{unit}"
+    },
+    "galleryLabel": "Galeri foto {unit}",
+    "prevImage": "Foto sebelumnya",
+    "nextImage": "Foto berikutnya",
+    "showImage": "Tampilkan foto {index}",
+    "photoNote": "Foto contoh berlisensi bebas, bukan hasil sesi foto unit ini. Kredit lengkap ada di halaman Kredit Foto.",
+    "telemetry": "Telemetri unit",
+    "telemetryHint": "Batang menunjukkan posisi unit ini dibanding seluruh koleksi yang tayang.",
+    "facts": "Data unit",
+    "specNote": "Spesifikasi mengacu pada angka publikasi pabrikan dan dibulatkan. Mohon verifikasi ulang saat pemeriksaan fisik.",
+    "electronics": "Elektronik & rider aids",
+    "equipment": "Kelengkapan",
+    "about": "Tentang unit ini",
+    "location": "Unit ada di showroom Jakarta Selatan",
+    "responseTime": "Dibalas pada jam operasional",
+    "paperwork": "Dokumen dibantu sampai tuntas",
+    "enquiryNote": "Menekan tombol di atas membuka WhatsApp dengan pesan yang sudah terisi. Anda tetap bisa mengubahnya sebelum mengirim.",
+    "mailSubject": "Tanya unit: {unit}",
+    "mailBody": "Halo OKTAN,\n\nSaya tertarik dengan {unit} yang dijual {price}.\nHalaman unit: {url}\n\nBoleh dibantu informasi kondisi terkini dan jadwal pemeriksaan?\n\nTerima kasih.",
+    "related": {
+      "eyebrow": "Alternatif",
+      "title": "Unit lain yang sekelas"
+    }
+  },
+  "finance": {
+    "title": "Simulasi cicilan",
+    "lead": "Hitungan cepat memakai metode bunga flat, format yang biasa dipakai perusahaan pembiayaan di Indonesia.",
+    "downPayment": "Uang muka",
+    "tenor": "Tenor",
+    "monthsShort": " bln",
+    "perMonth": "Perkiraan angsuran per bulan",
+    "dpAmount": "Uang muka",
+    "financed": "Dibiayai",
+    "rate": "Asumsi bunga",
+    "flatPerYear": "flat/tahun",
+    "total": "Total dibayar",
+    "disclaimer": "Angka ini simulasi, bukan penawaran kredit dan bukan persetujuan pembiayaan. Bunga, biaya administrasi, asuransi, dan syarat sebenarnya ditentukan oleh perusahaan pembiayaan setelah penilaian."
+  },
+  "home": {
+    "meta": {
+      "title": "Motor sport baru & bekas, diperiksa dan terbuka",
+      "description": "OKTAN — galeri motor sport baru dan bekas di Jakarta Selatan. Dua belas unit contoh, telemetri lengkap, simulasi cicilan, dan konsultasi via WhatsApp."
+    },
+    "hero": {
+      "eyebrow": "Galeri motor sport · Jakarta Selatan",
+      "titleLead": "Mesin yang jelas asal-usulnya,",
+      "titleAccent": "bukan cuma foto yang bagus",
+      "lead": "Baru atau bekas, setiap unit kami periksa, riwayatnya kami catat, dan harganya kami tulis apa adanya. Putar model 3D di samping, lalu bandingkan langsung dengan unit yang tayang.",
+      "statUnits": "Unit tayang",
+      "statUsed": "Unit bekas",
+      "statNew": "Unit baru",
+      "posterAlt": "Motor sport naked berdiri di ruang pamer bercahaya redup",
+      "canvasLabel": "Model 3D motor sport yang bisa diputar",
+      "hudLabel": "Studio 3D langsung",
+      "dragHint": "Tarik untuk memutar, pilih warna di bawah",
+      "fallbackHint": "Peramban ini belum mendukung 3D, foto studio ditampilkan sebagai gantinya",
+      "liveryLabel": "Pilihan warna",
+      "liveries": {
+        "ignition": "Ignition Orange",
+        "volt": "Volt Lime",
+        "coolant": "Coolant Cyan",
+        "carbon": "Carbon Matt"
+      }
+    },
+    "marquee": {
+      "label": "Merek yang tayang di koleksi"
+    },
+    "featured": {
+      "eyebrow": "Pilihan minggu ini",
+      "title": "Empat unit yang paling banyak ditanya",
+      "lead": "Dipilih karena kondisinya rapi dan dokumennya lengkap, bukan karena marginnya paling besar."
+    },
+    "categories": {
+      "eyebrow": "Kategori",
+      "title": "Mulai dari gaya berkendara Anda",
+      "count": "{count} unit"
+    },
+    "values": {
+      "eyebrow": "Cara kami bekerja",
+      "title": "Enam hal yang kami pastikan sebelum unit berpindah tangan",
+      "lead": "Kami tidak menjanjikan motor bekas seperti baru. Yang kami janjikan: Anda tahu persis apa yang Anda beli.",
+      "inspection": {
+        "title": "Pemeriksaan 60 titik",
+        "body": "Mesin, sasis, kelistrikan, rem, dan ban diperiksa satu per satu. Temuan minus tetap kami tulis, bukan disembunyikan."
+      },
+      "history": {
+        "title": "Riwayat yang bisa dibaca",
+        "body": "Buku servis, catatan perbaikan, dan status pajak dirangkum jadi satu lembar sebelum Anda datang."
+      },
+      "pricing": {
+        "title": "Harga terbuka",
+        "body": "Harga tertera di setiap listing. Biaya lain seperti mutasi atau pengiriman disebut angkanya sebelum kesepakatan."
+      },
+      "paperwork": {
+        "title": "Dokumen diurus",
+        "body": "STNK, BPKB, dan proses mutasi dibantu, termasuk estimasi waktu dan biaya yang perlu Anda siapkan."
+      },
+      "delivery": {
+        "title": "Pengiriman antar kota",
+        "body": "Unit bisa diambil di showroom atau dikirim memakai towing tertutup ke kota Anda dengan biaya yang disepakati di awal."
+      },
+      "aftercare": {
+        "title": "Rujukan bengkel & part",
+        "body": "Kami hubungkan Anda dengan bengkel spesialis dan jalur part yang kami pakai sendiri untuk unit sekelas."
+      }
+    },
+    "process": {
+      "eyebrow": "Alur pembelian",
+      "title": "Empat langkah, semuanya tercatat",
+      "lead": "Motor besar bukan barang checkout satu klik. Karena itu prosesnya kami buat berurutan dan tertulis.",
+      "browse": {
+        "title": "Pilih unit",
+        "body": "Bandingkan spesifikasi dan harga di katalog. Tandai maksimal tiga unit untuk dilihat berdampingan."
+      },
+      "inspect": {
+        "title": "Cek fisik & dokumen",
+        "body": "Datang ke showroom atau minta video call. Kami tunjukkan unitnya, hasil pemeriksaan, dan dokumennya."
+      },
+      "agree": {
+        "title": "Sepakat lewat WhatsApp",
+        "body": "Negosiasi, opsi pembayaran, dan rincian biaya ditulis di chat supaya kedua pihak punya catatan yang sama."
+      },
+      "handover": {
+        "title": "Serah terima",
+        "body": "Pelunasan, pemeriksaan ulang bersama, lalu unit diambil atau dikirim. Dokumen menyusul sesuai jadwal yang disepakati."
+      }
+    },
+    "editorial": {
+      "workshop": {
+        "eyebrow": "Persiapan unit",
+        "title": "Apa yang terjadi sebelum sebuah unit tayang",
+        "body": "Unit bekas tidak langsung difoto. Ada urutan pemeriksaan yang harus lewat dulu, dan hasilnya menentukan apakah unit itu kami terima atau kami tolak.",
+        "points": [
+          "Cek kompresi, kebocoran, serta kondisi rantai dan sproket",
+          "Pembacaan ECU untuk melihat kode kesalahan yang tersimpan",
+          "Rem, ban, dan suspensi diukur, bukan ditaksir",
+          "Foto detail termasuk bagian yang lecet atau sudah diganti"
+        ]
+      },
+      "ride": {
+        "eyebrow": "Setelah serah terima",
+        "title": "Kami tetap bisa dihubungi setelah kunci berpindah",
+        "body": "Motor sport butuh perawatan yang lebih disiplin daripada motor harian. Kami bantu Anda menyiapkan langkah awalnya, bukan menghilang setelah pembayaran.",
+        "points": [
+          "Jadwal servis pertama dan daftar part habis pakai",
+          "Rekomendasi tekanan ban dan setelan suspensi awal",
+          "Rujukan bengkel spesialis di kota Anda bila tersedia",
+          "Bantuan bila ada pertanyaan dokumen setelah mutasi"
+        ]
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Contoh tampilan ulasan",
+      "title": "Yang biasanya paling dihargai pembeli",
+      "lead": "Ditulis sebagai contoh untuk menampilkan tata letak halaman.",
+      "note": "Kutipan di atas adalah contoh ilustratif untuk demo tampilan, bukan ulasan pelanggan nyata.",
+      "t1": {
+        "quote": "Waktu saya tanya riwayat servis, yang keluar buku servisnya, bukan cerita. Dari situ saya lanjut.",
+        "author": "Rifqi A.",
+        "unit": "Kawasaki Z900RS"
+      },
+      "t2": {
+        "quote": "Sebelum saya terbang ke Jakarta, unitnya ditunjukkan lewat video call keliling. Sampai lokasi, kondisinya sama.",
+        "author": "Dewi P.",
+        "unit": "Yamaha MT-09"
+      },
+      "t3": {
+        "quote": "Rincian biaya mutasi diberikan sejak awal di chat, jadi tidak ada tambahan yang mengejutkan di akhir.",
+        "author": "Bayu S.",
+        "unit": "Ducati Panigale V4 R"
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "Pertanyaan umum",
+    "title": "Yang paling sering ditanyakan",
+    "lead": "Belum terjawab? Kirim pesan WhatsApp, kami jawab pada jam operasional.",
+    "items": {
+      "inspection": {
+        "q": "Apa saja yang diperiksa pada unit bekas?",
+        "a": "Pemeriksaan mencakup mesin (kompresi, kebocoran, suara), sasis dan kaki-kaki, kelistrikan serta pembacaan kode kesalahan ECU, sistem rem, ban, dan kelengkapan dokumen. Ringkasan hasilnya kami tunjukkan sebelum Anda memutuskan, termasuk bagian yang perlu perhatian."
+      },
+      "documents": {
+        "q": "Bagaimana dengan STNK, BPKB, dan pajak?",
+        "a": "Setiap unit bekas kami cantumkan masa berlaku pajaknya di halaman unit. BPKB dan STNK dicek keasliannya dan kesesuaian nomornya dengan fisik motor. Proses mutasi dan perpanjangan bisa kami bantu dengan biaya yang disebutkan lebih dulu."
+      },
+      "testRide": {
+        "q": "Bisa test ride?",
+        "a": "Untuk unit bekas, kami sediakan pemanasan mesin dan pemeriksaan bersama di area showroom. Test ride di jalan umum bergantung pada unit, kelengkapan dokumen, dan SIM Anda, jadi silakan dibicarakan lebih dulu lewat WhatsApp."
+      },
+      "financing": {
+        "q": "Apakah bisa dicicil?",
+        "a": "Bisa diarahkan ke perusahaan pembiayaan pihak ketiga. Simulasi cicilan di halaman unit memakai metode bunga flat dan sifatnya ilustrasi saja: suku bunga, biaya, dan persetujuan akhir ditentukan oleh pihak pembiayaan setelah penilaian dokumen Anda."
+      },
+      "delivery": {
+        "q": "Apakah bisa kirim ke luar kota?",
+        "a": "Ya. Pengiriman memakai towing tertutup, dan biayanya dihitung berdasarkan jarak serta jumlah unit. Estimasi biaya diberikan sebelum kesepakatan, bukan setelah pembayaran."
+      },
+      "tradeIn": {
+        "q": "Apakah menerima tukar tambah?",
+        "a": "Kami menerima penawaran tukar tambah untuk motor sport. Kirim foto, kilometer, tahun, dan dokumen unit Anda lewat WhatsApp; penilaian akhir dilakukan setelah pemeriksaan fisik."
+      },
+      "warranty": {
+        "q": "Ada garansi?",
+        "a": "Unit baru mengikuti garansi resmi dari pemegang merek, sesuai syarat pabrikan. Untuk unit bekas, tidak ada garansi pabrik; yang kami berikan adalah keterbukaan hasil pemeriksaan dan kesempatan memeriksa unit sebelum membeli."
+      },
+      "foreignBuyer": {
+        "q": "Saya di luar Jakarta atau di luar negeri, bagaimana caranya?",
+        "a": "Kami bisa mengirim video call keliling unit beserta foto detail dan hasil pemeriksaan. Pembayaran dan pengiriman diatur bertahap, dan seluruh kesepakatan tetap tercatat di chat."
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "Tentang OKTAN",
+      "description": "Cerita di balik OKTAN: showroom contoh untuk motor sport baru dan bekas dengan pemeriksaan terdokumentasi dan harga terbuka."
+    },
+    "hero": {
+      "eyebrow": "Tentang kami",
+      "title": "Toko motor sport yang menjawab pertanyaan sulit",
+      "lead": "Kami dibangun dari kebiasaan sederhana: sebutkan minusnya lebih dulu, baru bicara harga."
+    },
+    "stats": {
+      "founded": "Mulai tahun",
+      "units": "Unit tayang",
+      "checks": "Titik pemeriksaan"
+    },
+    "intro": {
+      "p1": "OKTAN dimulai dari garasi kecil yang isinya lebih banyak kunci daripada motor. Kebiasaan kami waktu itu sederhana: setiap motor yang masuk dibongkar dulu bagian yang meragukan, lalu dicatat apa saja yang perlu diganti. Catatan itu yang kemudian jadi standar pemeriksaan kami sampai sekarang.",
+      "p2": "Pasar motor sport di Indonesia punya masalah yang berulang: foto bagus, riwayat kabur. Kami memilih jalan yang lebih lambat tetapi lebih jelas — unit yang riwayatnya tidak bisa dijelaskan tidak kami tayangkan, meskipun harganya menarik.",
+      "p3": "Situs ini sendiri adalah demonstrasi teknis: unit, harga, dan riwayat pada halaman-halaman ini adalah data contoh, dan fotonya berasal dari koleksi berlisensi bebas. Struktur, alur pembelian, dan cara kami menulis informasi adalah bagian yang serius."
+    },
+    "principles": {
+      "title": "Prinsip yang kami pegang",
+      "transparency": {
+        "title": "Sebutkan minusnya lebih dulu.",
+        "body": "Lecet, part pengganti, atau servis yang tertunda disampaikan sebelum harga dibicarakan."
+      },
+      "condition": {
+        "title": "Kondisi diukur, bukan ditaksir.",
+        "body": "Ketebalan kampas, kedalaman ban, dan kebocoran diperiksa dengan alat, hasilnya ditulis."
+      },
+      "documents": {
+        "title": "Dokumen lengkap atau tidak dijual.",
+        "body": "Unit tanpa dokumen yang bisa diverifikasi tidak masuk katalog kami."
+      },
+      "noPressure": {
+        "title": "Tidak ada tekanan waktu.",
+        "body": "Kami tidak memakai hitungan mundur palsu atau klaim stok terakhir untuk mempercepat keputusan."
+      }
+    },
+    "timeline": {
+      "eyebrow": "Perjalanan",
+      "title": "Empat titik yang mengubah cara kami bekerja",
+      "lead": "Tahun pada garis waktu ini adalah bagian dari skenario demo.",
+      "items": {
+        "start": {
+          "title": "Garasi pertama",
+          "body": "Mulai dari perbaikan dan jual beli terbatas di lingkaran teman sesama pengendara."
+        },
+        "workshop": {
+          "title": "Standar pemeriksaan",
+          "body": "Daftar periksa 60 titik disusun agar setiap unit dinilai dengan ukuran yang sama."
+        },
+        "network": {
+          "title": "Jaringan bengkel",
+          "body": "Kerja sama dengan bengkel spesialis dan pemasok part untuk mesin performa tinggi."
+        },
+        "digital": {
+          "title": "Katalog digital",
+          "body": "Katalog daring dua bahasa dengan telemetri unit, perbandingan, dan konsultasi lewat WhatsApp."
+        }
+      }
+    },
+    "editorial": {
+      "prep": {
+        "eyebrow": "Ruang persiapan",
+        "title": "Motor lama bukan berarti motor asal-asalan",
+        "body": "Unit heritage dan modern klasik punya perlakuan berbeda: yang dijaga bukan hanya performa, tetapi juga keaslian detailnya. Kami memilih memperbaiki yang perlu dan meninggalkan yang masih orisinal.",
+        "points": [
+          "Cat orisinal dipertahankan selama masih layak",
+          "Part pengganti dicatat, termasuk merek dan alasannya",
+          "Kelistrikan lama diperiksa jalur per jalur",
+          "Foto diambil tanpa polesan yang menyamarkan usia"
+        ]
+      }
+    },
+    "team": {
+      "eyebrow": "Kunjungan",
+      "title": "Datang, lihat, tanya sepuasnya",
+      "lead": "Showroom contoh ini berada di Jakarta Selatan. Kabari dulu supaya unit yang ingin Anda lihat sudah siap."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Kontak & kunjungan",
+      "description": "Hubungi OKTAN lewat WhatsApp atau email, atau atur jadwal kunjungan ke showroom contoh di Jakarta Selatan."
+    },
+    "hero": {
+      "eyebrow": "Kontak",
+      "title": "Satu pesan, jawaban yang jelas",
+      "lead": "Kami membalas dengan kondisi terkini unit, hasil pemeriksaan, dan rincian biaya. Tanpa kewajiban membeli."
+    },
+    "address": {
+      "street": "Jl. Panglima Polim Raya No. 27"
+    },
+    "hours": {
+      "weekdays": "Senin – Jumat, 10.00 – 19.00 WIB",
+      "weekdaysShort": "Sen – Jum, 10.00 – 19.00 WIB",
+      "saturday": "Sabtu 10.00 – 17.00",
+      "sunday": "Minggu tutup"
+    },
+    "channels": {
+      "whatsappValue": "Jalur tercepat",
+      "whatsappMeta": "Pesan sudah terisi otomatis, tinggal Anda kirim",
+      "email": "Email",
+      "emailMeta": "Cocok untuk pertanyaan panjang dan lampiran dokumen",
+      "showroom": "Showroom",
+      "openMaps": "Buka di Maps",
+      "hours": "Jam operasional"
+    },
+    "mail": {
+      "subject": "Pertanyaan dari situs OKTAN",
+      "body": "Halo OKTAN,\n\nSaya ingin bertanya mengenai unit yang tayang di situs Anda.\n\nTerima kasih."
+    },
+    "form": {
+      "eyebrow": "Formulir",
+      "title": "Susun pesan Anda",
+      "lead": "Isi kolom di bawah, lalu tekan tombol untuk membuka WhatsApp dengan pesan yang sudah tersusun.",
+      "name": "Nama",
+      "namePlaceholder": "Nama lengkap Anda",
+      "phone": "Nomor WhatsApp",
+      "phonePlaceholder": "08xxxxxxxxxx",
+      "email": "Email",
+      "emailPlaceholder": "nama.anda{'@'}contoh.com",
+      "emailHint": "Opsional, diisi kalau Anda ingin dibalas lewat email.",
+      "interest": "Keperluan",
+      "interestPlaceholder": "Pilih keperluan",
+      "interests": {
+        "buy": "Membeli unit",
+        "sell": "Menjual motor saya",
+        "trade": "Tukar tambah",
+        "service": "Pertanyaan perawatan",
+        "other": "Lainnya"
+      },
+      "message": "Pesan",
+      "messagePlaceholder": "Sebutkan unit yang Anda minati, rencana waktu kunjungan, atau pertanyaan spesifik Anda.",
+      "submit": "Buka WhatsApp",
+      "emailInstead": "Kirim lewat email",
+      "privacyNote": "Formulir ini tidak mengirim data ke server kami. Isian Anda hanya dipakai untuk menyusun pesan di aplikasi WhatsApp atau email di perangkat Anda sendiri."
+    },
+    "errors": {
+      "name": "Mohon tulis nama Anda minimal 2 karakter.",
+      "phone": "Nomor WhatsApp tampak belum lengkap.",
+      "email": "Format email belum sesuai.",
+      "message": "Ceritakan sedikit lebih rinci, minimal 10 karakter."
+    },
+    "checklist": {
+      "title": "Yang perlu disiapkan saat berkunjung",
+      "items": {
+        "id": "KTP dan SIM C untuk pemeriksaan bersama",
+        "budget": "Rentang anggaran serta rencana pembayaran",
+        "unit": "Daftar unit yang ingin dilihat, agar kami siapkan lebih dulu",
+        "tradeIn": "Dokumen motor Anda bila berencana tukar tambah"
+      },
+      "note": "Kunjungan tanpa pemberitahuan tetap kami terima, hanya saja unit tertentu mungkin sedang dalam pemeriksaan."
+    }
+  },
+  "compliance": {
+    "meta": {
+      "title": "Kepatuhan & keterbukaan",
+      "description": "Penjelasan lengkap status situs OKTAN, sumber data, sumber foto, serta ketentuan konsumen yang berlaku untuk penjualan motor di Indonesia."
+    },
+    "hero": {
+      "eyebrow": "Kepatuhan",
+      "title": "Apa yang perlu Anda ketahui tentang situs ini",
+      "lead": "Halaman ini menjelaskan status situs, asal datanya, asal fotonya, dan aturan yang menjadi acuan kami."
+    },
+    "banner": "Situs ini adalah demonstrasi rancangan dan rekayasa web. OKTAN bukan badan usaha terdaftar, unit di katalog bukan stok nyata, dan tidak ada transaksi yang dapat diselesaikan melalui situs ini.",
+    "updated": "31 Juli 2026",
+    "seeCredits": "Lihat kredit foto",
+    "sections": [
+      {
+        "heading": "Status situs dan identitas",
+        "body": [
+          "OKTAN Superbike Gallery adalah nama merek placeholder yang dibuat untuk keperluan demonstrasi portofolio. Nama, logo, alamat, jam operasional, dan tahun berdiri pada situs ini adalah bagian dari skenario contoh, bukan data badan usaha yang terdaftar.",
+          "Karena itu, situs ini tidak mencantumkan nomor izin usaha, NPWP, atau nomor pendaftaran perdagangan. Sebelum digunakan untuk usaha sungguhan, seluruh identitas hukum harus diganti dengan data yang benar dan dapat diverifikasi."
+        ]
+      },
+      {
+        "heading": "Status data unit dan harga",
+        "body": [
+          "Dua belas unit pada katalog adalah data contoh. Harga, kilometer, jumlah pemilik, riwayat servis, dan masa berlaku pajak diisi dengan angka ilustratif yang wajar untuk pasar Indonesia, tetapi tidak merujuk pada motor tertentu yang benar-benar dijual.",
+          "Spesifikasi performa (tenaga, torsi, kapasitas, bobot) mengacu pada angka publikasi pabrikan dan telah dibulatkan. Angka bobot memakai bobot isi (kerb) bila tersedia. Untuk transaksi nyata, seluruh angka wajib diverifikasi pada unit fisik dan dokumennya.",
+          "Nama merek dan model kendaraan yang disebut adalah merek dagang milik pemegang haknya masing-masing. Penyebutan di sini bersifat deskriptif untuk mengidentifikasi jenis unit, dan tidak menyatakan hubungan keagenan, afiliasi, atau dukungan resmi dari pabrikan."
+        ]
+      },
+      {
+        "heading": "Sumber dan lisensi foto",
+        "body": [
+          "Seluruh foto motor dan foto suasana pada situs ini berasal dari Wikimedia Commons dan digunakan sesuai lisensinya: CC0, domain publik, CC BY, atau CC BY-SA. Foto-foto itu bukan hasil sesi foto unit yang dijual.",
+          "Lisensi CC BY dan CC BY-SA mewajibkan pencantuman nama pembuat dan lisensinya. Atribusi lengkap per berkas tersedia pada halaman Kredit Foto, dan berkas atribusi tersebut dihasilkan otomatis oleh skrip aset agar tidak pernah tertinggal dari gambar yang benar-benar dimuat.",
+          "Untuk penggunaan komersial sungguhan, kami menyarankan mengganti seluruh foto dengan foto unit sendiri agar tampilan dan kewajiban lisensinya sepenuhnya dalam kendali Anda."
+        ]
+      },
+      {
+        "heading": "Simulasi cicilan bukan penawaran kredit",
+        "body": [
+          "Kalkulator pada halaman unit memakai metode bunga flat dengan asumsi suku bunga tetap yang kami cantumkan di layar. Hasilnya adalah perkiraan kasar untuk membantu gambaran awal.",
+          "Perhitungan tersebut bukan penawaran kredit, bukan persetujuan pembiayaan, dan tidak memperhitungkan biaya administrasi, asuransi, provisi, denda keterlambatan, atau penilaian risiko. Skema sebenarnya ditentukan oleh perusahaan pembiayaan berizin setelah pengajuan resmi."
+        ]
+      },
+      {
+        "heading": "Perlindungan konsumen",
+        "body": [
+          "Penjualan kendaraan bermotor kepada konsumen di Indonesia tunduk pada Undang-Undang Nomor 8 Tahun 1999 tentang Perlindungan Konsumen, antara lain kewajiban memberikan informasi yang benar, jelas, dan jujur mengenai kondisi barang serta larangan iklan yang menyesatkan.",
+          "Karena itu, informasi kondisi pada listing sungguhan harus mencantumkan kerusakan atau catatan penting yang diketahui penjual, bukan hanya sisi baiknya. Situs demo ini menulis rekomendasi tersebut secara eksplisit agar tidak ditafsirkan sebagai klaim kondisi sempurna.",
+          "Untuk unit baru, garansi mengikuti ketentuan pemegang merek. Untuk unit bekas, tidak ada garansi pabrik, dan hal ini harus dinyatakan terang-terangan sebelum kesepakatan."
+        ]
+      },
+      {
+        "heading": "Dokumen, pajak, dan mutasi",
+        "body": [
+          "Kepemilikan kendaraan bermotor di Indonesia dibuktikan dengan BPKB dan STNK. Setiap transaksi nyata harus disertai pemeriksaan kesesuaian nomor rangka dan nomor mesin dengan dokumen, serta pengecekan status pajak dan blokir.",
+          "Biaya mutasi, bea balik nama, dan perpanjangan pajak mengikuti tarif yang berlaku di wilayah masing-masing. Estimasi biaya sebaiknya diberikan tertulis sebelum kesepakatan agar tidak menjadi tambahan yang tidak disepakati."
+        ]
+      },
+      {
+        "heading": "Keselamatan berkendara",
+        "body": [
+          "Motor sport berkapasitas besar menuntut pengalaman, perlengkapan pelindung, dan SIM yang sesuai. Kami tidak menampilkan konten yang mendorong kecepatan berlebih atau berkendara di jalan umum di luar batas hukum.",
+          "Foto suasana yang menampilkan pengendara dalam posisi menikung diambil dari koleksi berlisensi bebas dan tidak dimaksudkan sebagai anjuran mengulangi manuver serupa di jalan umum."
+        ]
+      },
+      {
+        "heading": "Aksesibilitas dan teknologi",
+        "body": [
+          "Situs ini dibangun dengan target aksesibilitas WCAG 2.1 tingkat AA: kontras teks yang memadai, urutan fokus yang terlihat, penanda ARIA pada komponen interaktif, serta menghormati pengaturan prefers-reduced-motion.",
+          "Sorotan 3D pada halaman depan adalah peningkatan opsional. Bila peramban tidak mendukung WebGL, jika terjadi galat, atau bila pengguna meminta pengurangan animasi, situs otomatis menampilkan foto statis tanpa kehilangan informasi.",
+          "Bila Anda menemukan hambatan aksesibilitas, silakan beri tahu kami melalui kanal kontak. Perbaikan aksesibilitas kami perlakukan sebagai perbaikan cacat, bukan permintaan fitur."
+        ]
+      },
+      {
+        "heading": "Pembaruan halaman ini",
+        "body": [
+          "Setiap kali fitur, data, atau aset pihak ketiga berubah, halaman ini dan berkas dokumentasi proyek diperbarui pada perubahan yang sama. Tanggal di bagian atas halaman menunjukkan pembaruan terakhir.",
+          "Bila ada bagian yang menurut Anda kurang jelas atau berpotensi menyesatkan, kami ingin mendengarnya. Menyampaikan koreksi lebih baik daripada membiarkan klaim yang tidak bisa dipertanggungjawabkan."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "meta": {
+      "title": "Kebijakan privasi",
+      "description": "Data apa yang disimpan situs OKTAN, apa yang tidak disimpan, dan bagaimana formulir kontak bekerja tanpa mengirim data ke server."
+    },
+    "hero": {
+      "eyebrow": "Privasi",
+      "title": "Sedikit data, dijelaskan seluruhnya",
+      "lead": "Situs ini tidak memakai analitik, tidak memasang piksel pelacak, dan tidak menyimpan isian formulir Anda."
+    },
+    "updated": "31 Juli 2026",
+    "sections": [
+      {
+        "heading": "Ringkasan",
+        "body": [
+          "Situs ini adalah situs statis yang tidak memiliki basis data pengunjung. Kami tidak memasang Google Analytics, piksel media sosial, maupun skrip pelacak pihak ketiga.",
+          "Dua hal yang disimpan di peramban Anda: satu cookie pilihan bahasa, dan satu entri localStorage untuk daftar unit yang Anda tandai untuk dibandingkan. Keduanya tetap di perangkat Anda."
+        ]
+      },
+      {
+        "heading": "Cookie pilihan bahasa",
+        "body": [
+          "Saat Anda berpindah antara Bahasa Indonesia dan English, pilihan itu disimpan dalam cookie bernama i18n_locale agar kunjungan berikutnya langsung memakai bahasa yang sama.",
+          "Cookie ini bersifat fungsional, tidak berisi identitas, dan tidak dibagikan ke pihak lain. Anda bisa menghapusnya kapan saja dari pengaturan peramban."
+        ]
+      },
+      {
+        "heading": "Daftar perbandingan unit",
+        "body": [
+          "Unit yang Anda tandai untuk dibandingkan disimpan dalam localStorage dengan kunci oktan.compare, semata agar pilihan Anda tidak hilang saat halaman dimuat ulang.",
+          "Data ini tidak dikirim ke mana pun. Menekan tombol Kosongkan pada baki perbandingan akan menghapusnya."
+        ]
+      },
+      {
+        "heading": "Formulir kontak",
+        "body": [
+          "Formulir pada halaman Kontak tidak mengirimkan data ke server kami, karena situs ini tidak memiliki endpoint penerima. Isian Anda dipakai untuk menyusun teks pesan, lalu dibuka di aplikasi WhatsApp atau klien email di perangkat Anda.",
+          "Artinya, tidak ada data yang berpindah sampai Anda sendiri menekan kirim di aplikasi tersebut. Setelah pesan terkirim, isi percakapan mengikuti kebijakan privasi penyedia layanan tersebut."
+        ]
+      },
+      {
+        "heading": "Layanan pihak ketiga",
+        "body": [
+          "Berkas font dimuat dari Google Fonts, sehingga alamat IP Anda terlihat oleh layanan tersebut saat font diunduh. Seluruh foto, skrip, dan gaya lainnya dilayankan dari domain situs ini sendiri.",
+          "Tautan WhatsApp mengarah ke wa.me milik WhatsApp, dan tautan peta mengarah ke Google Maps. Membuka tautan itu berarti Anda masuk ke layanan pihak ketiga dengan kebijakan privasinya sendiri. Kami sengaja tidak menyematkan peta atau video dalam halaman agar tidak ada cookie pihak ketiga yang terpasang tanpa Anda ketahui."
+        ]
+      },
+      {
+        "heading": "Log server",
+        "body": [
+          "Penyedia hosting dapat mencatat log teknis standar seperti alamat IP, waktu akses, dan user agent untuk keperluan keamanan dan pemeliharaan. Kami tidak memakai log tersebut untuk profil pemasaran.",
+          "Untuk penerapan nyata, penyedia hosting yang dipakai harus disebutkan pada halaman ini beserta lokasi penyimpanan datanya."
+        ]
+      },
+      {
+        "heading": "Hak Anda dan kontak",
+        "body": [
+          "Karena kami tidak menyimpan data pribadi Anda di sisi server, tidak ada arsip yang perlu diminta atau dihapus. Bila Anda pernah mengirim pesan WhatsApp atau email kepada kami, Anda dapat meminta percakapan itu dihapus dari sisi kami.",
+          "Pertanyaan mengenai privasi dapat dikirim melalui kanal kontak yang tercantum pada halaman Kontak."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Ketentuan penggunaan",
+      "description": "Ketentuan penggunaan situs OKTAN: status listing, cara harga dicantumkan, batas tanggung jawab, dan hukum yang berlaku."
+    },
+    "hero": {
+      "eyebrow": "Ketentuan",
+      "title": "Aturan main penggunaan situs",
+      "lead": "Ringkas, tanpa bahasa yang menyembunyikan maksud."
+    },
+    "updated": "31 Juli 2026",
+    "sections": [
+      {
+        "heading": "Penerimaan ketentuan",
+        "body": [
+          "Dengan menggunakan situs ini, Anda dianggap membaca dan menerima ketentuan pada halaman ini beserta pernyataan pada halaman Kepatuhan dan Kebijakan Privasi.",
+          "Bila Anda tidak menyetujui salah satu bagiannya, mohon berhenti menggunakan situs ini."
+        ]
+      },
+      {
+        "heading": "Sifat listing",
+        "body": [
+          "Katalog pada situs ini berisi data contoh untuk keperluan demonstrasi. Bahkan pada penerapan nyata, listing kendaraan merupakan undangan untuk berdiskusi, bukan penawaran yang mengikat secara hukum.",
+          "Kesepakatan jual beli baru terbentuk setelah pemeriksaan unit, persetujuan harga akhir, dan konfirmasi tertulis dari kedua pihak."
+        ]
+      },
+      {
+        "heading": "Harga dan biaya",
+        "body": [
+          "Harga ditampilkan dalam Rupiah untuk satu unit dan belum mencakup biaya mutasi, bea balik nama, perpanjangan pajak, asuransi, aksesori, maupun pengiriman, kecuali dinyatakan lain.",
+          "Harga dapat berubah tanpa pemberitahuan lebih dulu. Angka yang berlaku adalah angka yang dikonfirmasi tertulis pada percakapan sebelum pembayaran."
+        ]
+      },
+      {
+        "heading": "Ketersediaan unit",
+        "body": [
+          "Status ketersediaan pada situs demo ini bersifat statis. Pada penerapan nyata, satu unit dapat terjual di kanal lain sebelum halamannya diperbarui.",
+          "Karena itu, ketersediaan selalu perlu dikonfirmasi lewat percakapan sebelum Anda melakukan perjalanan atau pembayaran."
+        ]
+      },
+      {
+        "heading": "Konten dan hak kekayaan intelektual",
+        "body": [
+          "Teks, tata letak, dan kode situs ini dibuat untuk keperluan portofolio. Foto berasal dari pihak ketiga dengan lisensi bebas dan dikreditkan pada halaman Kredit Foto sesuai kewajiban lisensinya.",
+          "Merek dan model kendaraan yang disebut adalah milik pemegang haknya masing-masing dan dipakai secara deskriptif tanpa menyatakan afiliasi."
+        ]
+      },
+      {
+        "heading": "Batas tanggung jawab",
+        "body": [
+          "Situs ini disediakan apa adanya. Kami berusaha menjaga ketepatan informasi, namun tidak menjamin bahwa seluruh angka spesifikasi, ketersediaan, atau perkiraan biaya bebas dari kekeliruan.",
+          "Keputusan pembelian kendaraan sebaiknya didasarkan pada pemeriksaan fisik, verifikasi dokumen, dan bila perlu penilaian pihak ketiga yang independen — bukan hanya pada halaman web."
+        ]
+      },
+      {
+        "heading": "Hukum yang berlaku",
+        "body": [
+          "Ketentuan ini tunduk pada hukum Republik Indonesia. Untuk penerapan nyata, penyelesaian sengketa dan yurisdiksi pengadilan perlu dicantumkan secara spesifik.",
+          "Perubahan ketentuan akan ditampilkan pada halaman ini dengan tanggal pembaruan yang baru."
+        ]
+      }
+    ]
+  },
+  "credits": {
+    "meta": {
+      "title": "Kredit foto",
+      "description": "Atribusi lengkap untuk setiap foto yang dipakai di situs OKTAN, termasuk nama pembuat, lisensi, dan tautan sumbernya."
+    },
+    "hero": {
+      "eyebrow": "Atribusi",
+      "title": "Setiap foto punya pemiliknya",
+      "lead": "Foto pada situs ini berasal dari koleksi berlisensi bebas. Lisensi CC BY dan CC BY-SA mewajibkan atribusi, dan inilah daftarnya."
+    },
+    "intro": "Daftar ini dihasilkan otomatis oleh skrip aset yang mengunduh dan memproses foto, sehingga isinya selalu mengikuti gambar yang benar-benar dimuat di situs. Satu foto sumber bisa menghasilkan beberapa bingkai keluaran, misalnya bingkai utama dan potongan detail.",
+    "licencesUsed": "Lisensi yang dipakai pada koleksi ini:",
+    "replaceNote": "Untuk penggunaan komersial, ganti seluruh foto dengan foto unit Anda sendiri agar hak pakai dan kualitas gambarnya sepenuhnya dalam kendali Anda.",
+    "tableCaption": "Daftar atribusi foto beserta pembuat dan lisensinya",
+    "columns": {
+      "photo": "Berkas sumber",
+      "author": "Pembuat",
+      "licence": "Lisensi",
+      "frames": "Bingkai"
+    },
+    "note": "Foto-foto ini menggambarkan model kendaraan yang serupa, bukan unit tertentu yang dijual. Sebagian bingkai adalah pemotongan ulang dari foto yang sama."
+  },
+  "legal": {
+    "lastUpdated": "Diperbarui {date}"
+  },
+  "error": {
+    "notFound": {
+      "title": "Halaman tidak ditemukan",
+      "body": "Unit yang Anda cari mungkin sudah dilepas atau tautannya berubah. Silakan lihat koleksi yang tayang saat ini."
+    },
+    "generic": {
+      "title": "Ada yang tidak berjalan semestinya",
+      "body": "Terjadi galat di sisi kami. Coba muat ulang halaman, atau hubungi kami lewat WhatsApp bila masih terjadi."
+    },
+    "backHome": "Kembali ke beranda"
+  },
+  "footer": {
+    "pitch": "Galeri motor sport baru dan bekas dengan pemeriksaan terdokumentasi, riwayat yang bisa dibaca, dan harga yang ditulis terbuka.",
+    "explore": "Jelajahi",
+    "legal": "Legal",
+    "reach": "Hubungi",
+    "rights": "Seluruh hak dilindungi.",
+    "built": "Dibangun dengan Nuxt · Bahasa Indonesia & English"
+  },
+  "wa": {
+    "enquiry": {
+      "general": "Halo OKTAN, saya melihat situs Anda dan ingin bertanya mengenai unit yang tayang.",
+      "bike": "Halo OKTAN, saya tertarik dengan %unit% (%year%) yang tercantum %price%, kilometer %mileage%.\n\nHalaman unit: %url%\n\nBoleh dibantu informasi kondisi terkini, hasil pemeriksaan, dan jadwal untuk melihat unitnya?",
+      "compare": "Halo OKTAN, saya sedang membandingkan beberapa unit berikut:\n\n%list%\n\nBoleh dibantu masukan mengenai kondisi dan biaya masing-masing?",
+      "contact": "Halo OKTAN,\n\nNama: %name%\nWhatsApp: %phoneNumber%\nEmail: %email%\nKeperluan: %interest%\n\n%message%"
+    }
+  },
+  "bikes": {
+    "ducati-panigale-v4r": {
+      "tagline": "Mesin homologasi balap 998 cc dengan putaran mesin tertinggi di kelasnya.",
+      "description": "Panigale V4 R adalah versi homologasi Ducati untuk balap Superbike: kapasitas diturunkan menjadi 998 cc agar bisa berputar lebih tinggi, dengan sasis dan aerodinamika yang mengikuti kebutuhan lintasan. Unit contoh ini berkilometer rendah dengan buku servis lengkap, sehingga cocok untuk kolektor atau pemakaian trackday terjadwal. Perlu dicatat, interval perawatan mesin R lebih ketat daripada Panigale standar dan biaya part-nya mengikuti karakter itu."
+    },
+    "bmw-s1000rr": {
+      "tagline": "Supersport 4 silinder sejajar dengan paket elektronik yang paling mudah diajak kompromi.",
+      "description": "S 1000 RR dikenal karena tenaga besarnya terasa tetap dapat dikelola, berkat mode berkendara, kontrol traksi berbasis IMU, dan quickshifter naik-turun. Unit baru ini datang dengan garansi resmi pemegang merek dan kelengkapan standar dari pabrik. Untuk pengendara yang ingin motor lintasan tanpa kehilangan kenyamanan jalan raya, model ini biasanya menjadi titik awal pembicaraan."
+    },
+    "honda-cbr1000rr-r-sp": {
+      "tagline": "Versi SP dengan suspensi Öhlins semi-aktif dan warna Grand Prix.",
+      "description": "Fireblade SP mengambil basis CBR1000RR-R lalu menambahkan suspensi Öhlins elektronik dan rem yang lebih kuat, sebuah paket yang dirancang mengikuti proyek balap Honda. Unit contoh ini berkilometer sedang dengan riwayat servis lengkap dan pajak masih panjang. Karakter mesinnya lebih menonjol di putaran atas, jadi pengendara yang lebih sering di kemacetan biasanya lebih cocok dengan naked bike."
+    },
+    "yamaha-yzf-r1": {
+      "tagline": "Generasi crossplane 2015 ke atas, dengan karakter suara yang khas.",
+      "description": "R1 generasi ini memakai mesin crossplane yang membuat penyaluran tenaganya terasa lebih bertahap dan suaranya berbeda dari 4 silinder sejajar biasa. Unit contoh sudah menempuh jarak yang wajar untuk usianya, dengan riwayat servis sebagian dan ban baru terpasang. Pilihan menarik bagi yang mencari supersport bertenaga besar dengan harga jauh di bawah unit keluaran terbaru, dengan catatan perlu dana perawatan berkala."
+    },
+    "kawasaki-ninja-zx10r": {
+      "tagline": "Basis Superbike Kawasaki dengan sasis yang stabil pada kecepatan tinggi.",
+      "description": "ZX-10R dibangun mengikuti kebutuhan balap Superbike, dan hasilnya terasa pada kestabilan sasis serta rem yang konsisten saat panas. Unit contoh ini pemilik pertama dengan buku servis lengkap dan pajak masih panjang. Ergonominya lebih ramah dibanding beberapa pesaing untuk penggunaan jalan raya, meski posisi duduknya tetap khas supersport."
+    },
+    "aprilia-rsv4-rr": {
+      "tagline": "V4 kompak buatan Noale, salah satu supersport dengan sasis paling dipuji.",
+      "description": "RSV4 memakai mesin V4 yang ringkas sehingga sasisnya bisa dibuat sangat pendek dan responsif saat berpindah arah. Unit contoh ini sudah menempuh jarak cukup jauh dengan riwayat servis sebagian, dilengkapi knalpot Akrapovič dan frame slider. Bagi pengendara yang mengutamakan rasa sasis dan suara V4, unit seperti ini menawarkan pengalaman yang sulit didapat dari mesin 4 silinder sejajar."
+    },
+    "ktm-1290-super-duke-r": {
+      "tagline": "Naked bike V-twin 1301 cc dengan torsi besar sejak putaran bawah.",
+      "description": "Super Duke R memakai mesin LC8 V-twin yang menghasilkan torsi besar sejak putaran rendah, membuatnya terasa cepat tanpa harus mengejar putaran tinggi. Unit contoh ini pemilik pertama dengan buku servis lengkap. Karakternya menyenangkan di jalan berkelok dan penggunaan harian, meski konsumsi ban belakang cenderung lebih cepat dibanding motor bermesin lebih kecil."
+    },
+    "yamaha-mt09": {
+      "tagline": "Tiga silinder 890 cc yang menjadi patokan naked bike menengah.",
+      "description": "MT-09 menawarkan mesin tiga silinder dengan tarikan menengah yang kuat, bobot ringan, dan elektronik yang kini cukup lengkap termasuk cornering ABS serta quickshifter. Unit baru ini datang dengan garansi resmi pemegang merek. Untuk pengendara yang naik kelas dari motor 250–650 cc, model ini sering menjadi langkah yang paling mudah diterima tanpa terasa berlebihan."
+    },
+    "mv-agusta-brutale-1000-rs": {
+      "tagline": "Naked bike 4 silinder buatan Varese dengan detail yang tidak biasa.",
+      "description": "Brutale 1000 RS menggabungkan mesin 4 silinder bertenaga besar dengan pengerjaan detail dan knalpot empat lubang yang menjadi ciri MV Agusta. Unit baru ini datang dengan garansi resmi pemegang merek dan kelengkapan standar pabrik. Perlu dipertimbangkan bahwa jaringan layanan MV Agusta lebih terbatas dibanding merek Jepang, sehingga rencana perawatan sebaiknya dibicarakan sejak awal."
+    },
+    "triumph-street-triple-r": {
+      "tagline": "Tiga silinder 675 cc, pintu masuk yang wajar ke motor sport Eropa.",
+      "description": "Street Triple 675 dikenal ringan, mudah dikendalikan, dan punya suara tiga silinder yang khas. Unit contoh ini sudah menempuh jarak tinggi dengan tiga pemilik sebelumnya dan riwayat servis sebagian, sehingga harganya paling terjangkau di katalog ini. Kami mencantumkan kondisi tersebut apa adanya: unit seperti ini menyenangkan dipakai harian, dengan catatan perlu anggaran perawatan rutin."
+    },
+    "kawasaki-z900rs": {
+      "tagline": "Gaya klasik dengan mesin 948 cc modern dan pengendalian yang ramah.",
+      "description": "Z900RS mengambil bahasa desain Z1 tahun 1972 lalu memasangkannya dengan mesin 948 cc modern yang penyaluran tenaganya sengaja dibuat lebih halus. Unit contoh ini pemilik pertama, cat masih orisinal, buku servis lengkap, dan pajak masih panjang. Cocok untuk pengendara yang menginginkan tampilan retro tanpa kompromi keandalan harian."
+    },
+    "ducati-multistrada-v4s": {
+      "tagline": "Sport touring V4 dengan suspensi semi-aktif dan cruise control adaptif.",
+      "description": "Multistrada V4 S dirancang untuk jarak jauh tanpa melepaskan karakter sport: mesin V4 bertenaga besar, suspensi semi-aktif, dan bantuan elektronik termasuk cruise control adaptif berbasis radar. Unit baru ini datang dengan garansi resmi pemegang merek. Bobotnya paling tinggi di katalog ini, jadi cocok untuk perjalanan berbeban, bukan untuk motor lincah di dalam kota."
+    }
+  }
+}

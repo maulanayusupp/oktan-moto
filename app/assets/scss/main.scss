@@ -1,0 +1,14 @@
+// =============================================================================
+// Single global SCSS entrypoint (referenced by nuxt.config `css`). Order
+// matters: tokens → reset → typography → base → utilities.
+//
+// `_variables` + `_mixins` are auto-injected into every component's <style>
+// through `_shared.scss`, so they are not re-exported here. There is no inline
+// CSS anywhere in the app — global rules live in these files, component rules
+// live in each component's scoped <style lang="scss"> block.
+// =============================================================================
+@use 'tokens';
+@use 'reset';
+@use 'typography';
+@use 'base';
+@use 'utilities';

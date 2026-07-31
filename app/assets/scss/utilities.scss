@@ -1,0 +1,61 @@
+// =============================================================================
+// Utilities — a deliberately small set. Anything that repeats visually should
+// become a component or a mixin instead of growing this file.
+// =============================================================================
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.text-muted {
+  color: $titanium;
+}
+
+.text-dim {
+  color: $steel;
+}
+
+.text-accent {
+  color: $ignition;
+}
+
+.text-volt {
+  color: $volt;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.stack {
+  display: flex;
+  flex-direction: column;
+  gap: $space-4;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: $space-3;
+  flex-wrap: wrap;
+}
+
+.hairline {
+  height: 1px;
+  border: 0;
+  background: linear-gradient(90deg, $carbon-700, transparent);
+}
+
+.no-scroll {
+  overflow: hidden;
+}
+
+.desktop-only {
+  @include until($bp-md) {
+    display: none !important;
+  }
+}
+
+.mobile-only {
+  @include from($bp-md) {
+    display: none !important;
+  }
+}

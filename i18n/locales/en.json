@@ -1,0 +1,893 @@
+{
+  "meta": {
+    "tagline": "New & Pre-Owned Sportbike Gallery",
+    "description": "OKTAN is a curated gallery of new and pre-owned sportbikes in South Jakarta. Every unit is inspected, its history documented, its price stated openly — with enquiries handled directly over WhatsApp."
+  },
+  "common": {
+    "demoShort": "Demo site: the showroom name, units, prices and histories on this page are sample data.",
+    "demoNotice": "OKTAN is a demonstration showroom. The units, prices, mileage and ownership histories are illustrative sample data, not stock that is actually for sale."
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "home": "OKTAN — back to home",
+    "primaryNav": "Primary navigation",
+    "footerNav": "Footer navigation",
+    "legalNav": "Legal document navigation",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "languageSwitcher": "Choose language",
+    "breadcrumb": "Breadcrumb"
+  },
+  "nav": {
+    "home": "Home",
+    "inventory": "Inventory",
+    "about": "About",
+    "contact": "Contact",
+    "compliance": "Compliance",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "credits": "Photo credits"
+  },
+  "cta": {
+    "whatsapp": "WhatsApp",
+    "whatsappLong": "Talk to us on WhatsApp",
+    "viewUnit": "View unit",
+    "browseInventory": "Browse inventory",
+    "talkToUs": "Ask first",
+    "seeAll": "All units",
+    "aboutUs": "About us",
+    "askAboutUnit": "Ask about this unit",
+    "emailUs": "Send an email",
+    "visitShowroom": "Book a viewing",
+    "band": {
+      "eyebrow": "Next step",
+      "title": "Found a machine worth asking about?",
+      "lead": "Send one message and you get its current condition, the inspection findings and a cost breakdown. No obligation to buy."
+    }
+  },
+  "condition": {
+    "new": "New",
+    "used": "Pre-owned"
+  },
+  "category": {
+    "supersport": "Supersport",
+    "naked": "Naked",
+    "sport-touring": "Sport touring",
+    "heritage": "Heritage"
+  },
+  "colors": {
+    "rossoCorsa": "Rosso Corsa",
+    "lightWhiteMsport": "Light White / Motorsport",
+    "grandPrixTricolour": "Grand Prix Tricolour",
+    "teamYamahaBlue": "Team Yamaha Blue",
+    "limeGreenEbony": "Lime Green / Ebony",
+    "nardoMatt": "Matt grey",
+    "orangeWhite": "Orange / White",
+    "cyanStorm": "Cyan Storm",
+    "rossoAgo": "Rosso Ago",
+    "phantomBlack": "Phantom Black",
+    "candytoneOrange": "Candytone Orange",
+    "auroraBlack": "Aurora Black"
+  },
+  "spec": {
+    "power": "Power",
+    "ptw": "Power to weight",
+    "displacement": "Displacement",
+    "weight": "Kerb weight",
+    "year": "Year",
+    "engine": "Engine layout",
+    "torque": "Torque",
+    "colour": "Colour",
+    "mileage": "Odometer",
+    "condition": "Condition",
+    "priceExact": "Price",
+    "owners": "Previous keepers",
+    "serviceHistory": "Service history",
+    "taxValid": "Road tax valid until",
+    "layout": {
+      "v4": "V4, four-stroke",
+      "inline4": "Inline four",
+      "crossplane4": "Crossplane four",
+      "vTwin": "V-twin",
+      "triple": "Inline triple"
+    },
+    "history": {
+      "full": "Complete",
+      "partial": "Partial",
+      "unknown": "Not yet verified"
+    }
+  },
+  "e": {
+    "imu": "Six-axis IMU",
+    "abs": "ABS",
+    "corneringAbs": "Cornering ABS",
+    "tractionControl": "Traction control",
+    "wheelieControl": "Wheelie control",
+    "slideControl": "Slide control",
+    "quickshifter": "Up/down quickshifter",
+    "launchControl": "Launch control",
+    "engineBrakeControl": "Engine-brake control",
+    "rideModes": "Ride modes",
+    "cruiseControl": "Cruise control",
+    "semiActiveSuspension": "Semi-active suspension",
+    "radarAcc": "Radar adaptive cruise control",
+    "hillHoldControl": "Hill hold control",
+    "slipperClutch": "Slipper clutch"
+  },
+  "f": {
+    "aeroWinglets": "Aerodynamic winglets",
+    "ohlinsSuspension": "Öhlins suspension",
+    "wpSuspension": "WP suspension",
+    "marzocchiSuspension": "Marzocchi suspension",
+    "dryClutch": "Dry clutch",
+    "serviceBook": "Service book available",
+    "forgedWheels": "Forged wheels",
+    "magnesiumWheels": "Magnesium wheels",
+    "spinForgedWheels": "SpinForged wheels",
+    "tftDash": "Colour TFT dash",
+    "ledLighting": "Full LED lighting",
+    "oemToolkit": "Complete OEM toolkit",
+    "brembo": "Brembo calipers",
+    "titaniumSilencer": "Titanium silencer",
+    "akrapovicExhaust": "Akrapovič exhaust",
+    "arrowExhaust": "Arrow exhaust",
+    "tyresNew": "New tyres",
+    "frameSliders": "Frame sliders fitted",
+    "tailTidy": "Tail tidy",
+    "paddockStand": "Paddock stand included",
+    "originalPaint": "Original paint",
+    "singleOwner": "One owner from new",
+    "touringScreen": "Touring screen",
+    "heatedGrips": "Heated grips",
+    "panniersReady": "Pannier mounts ready"
+  },
+  "inventory": {
+    "priceNote": "Unit price, before transfer fees",
+    "zeroKm": "New, 0 km",
+    "empty": "No units match these filters. Try loosening the search.",
+    "resultCount": "{count} units shown",
+    "sortLabel": "Sort by",
+    "sort": {
+      "featured": "Our picks",
+      "price-asc": "Lowest price",
+      "price-desc": "Highest price",
+      "power-desc": "Most power",
+      "year-desc": "Newest year",
+      "cc-desc": "Largest capacity"
+    },
+    "filters": {
+      "searchLabel": "Search units",
+      "searchPlaceholder": "Search make, model or year",
+      "conditionLabel": "Unit condition",
+      "categoryLabel": "Unit category",
+      "all": "All",
+      "allCategories": "All categories",
+      "priceLabel": "Price ceiling",
+      "anyPrice": "Any price",
+      "under": "Under {price}",
+      "ccLabel": "Displacement",
+      "anyCc": "Any capacity",
+      "fromCc": "From {cc} cc",
+      "reset": "Clear {count} filters"
+    },
+    "stats": {
+      "total": "Units listed",
+      "new": "New units",
+      "used": "Pre-owned units"
+    },
+    "meta": {
+      "title": "New & pre-owned sportbike inventory",
+      "description": "Browse 12 sample units across supersport, naked, sport touring and heritage. Filter by condition, category, price and displacement."
+    },
+    "hero": {
+      "eyebrow": "Inventory",
+      "title": "Twelve machines, one inspection standard",
+      "lead": "Compare specifications, mileage and price side by side. Flag up to three units, then continue the conversation on WhatsApp."
+    }
+  },
+  "compare": {
+    "title": "Compare",
+    "add": "Compare unit",
+    "remove": "Remove from comparison",
+    "removeUnit": "Remove {unit} from comparison",
+    "full": "Three units maximum",
+    "clear": "Clear",
+    "ask": "Ask about all",
+    "inTray": "In comparison",
+    "spec": "Specification",
+    "tableCaption": "Specification comparison of the selected units",
+    "note": "Highlighted figures are the best value in that row. Weights use the manufacturers' kerb figures.",
+    "rows": {
+      "price": "Price",
+      "power": "Power",
+      "torque": "Torque",
+      "weight": "Weight",
+      "ptw": "Power per tonne",
+      "cc": "Displacement",
+      "year": "Year",
+      "mileage": "Odometer"
+    }
+  },
+  "unit": {
+    "meta": {
+      "title": "{unit}"
+    },
+    "galleryLabel": "Photo gallery for {unit}",
+    "prevImage": "Previous photo",
+    "nextImage": "Next photo",
+    "showImage": "Show photo {index}",
+    "photoNote": "Freely licensed sample photography, not a shoot of this individual unit. Full credits are on the Photo credits page.",
+    "telemetry": "Unit telemetry",
+    "telemetryHint": "Each bar shows where this unit sits against the whole listed collection.",
+    "facts": "Unit data",
+    "specNote": "Specifications follow the manufacturers' published figures, rounded. Please verify them during the physical inspection.",
+    "electronics": "Electronics & rider aids",
+    "equipment": "Equipment",
+    "about": "About this unit",
+    "location": "Held at the South Jakarta showroom",
+    "responseTime": "Answered during opening hours",
+    "paperwork": "Paperwork handled end to end",
+    "enquiryNote": "The button above opens WhatsApp with a pre-filled message. You can still edit it before sending.",
+    "mailSubject": "Enquiry: {unit}",
+    "mailBody": "Hello OKTAN,\n\nI am interested in the {unit} listed at {price}.\nUnit page: {url}\n\nCould you share its current condition and a time to inspect it?\n\nThank you.",
+    "related": {
+      "eyebrow": "Alternatives",
+      "title": "Other units in the same league"
+    }
+  },
+  "finance": {
+    "title": "Instalment estimate",
+    "lead": "A quick calculation using the flat-rate method, the format Indonesian finance companies usually quote.",
+    "downPayment": "Down payment",
+    "tenor": "Tenor",
+    "monthsShort": " mo",
+    "perMonth": "Estimated monthly instalment",
+    "dpAmount": "Down payment",
+    "financed": "Financed",
+    "rate": "Assumed rate",
+    "flatPerYear": "flat/year",
+    "total": "Total paid",
+    "disclaimer": "These figures are an illustration, not a credit offer and not a financing approval. The real rate, administration fees, insurance and terms are set by a licensed finance company after assessment."
+  },
+  "home": {
+    "meta": {
+      "title": "Sportbikes, new and pre-owned, inspected and stated openly",
+      "description": "OKTAN — a new and pre-owned sportbike gallery in South Jakarta. Twelve sample units, full telemetry, an instalment estimator and enquiries over WhatsApp."
+    },
+    "hero": {
+      "eyebrow": "Sportbike gallery · South Jakarta",
+      "titleLead": "Machines with a documented past,",
+      "titleAccent": "not just flattering photos",
+      "lead": "New or pre-owned, every unit is inspected, its history written down and its price stated as it is. Spin the 3D model beside this text, then compare it against what is actually listed.",
+      "statUnits": "Units listed",
+      "statUsed": "Pre-owned",
+      "statNew": "Brand new",
+      "posterAlt": "A naked sportbike standing in a dimly lit showroom",
+      "canvasLabel": "Rotatable 3D model of a sportbike",
+      "hudLabel": "Live 3D studio",
+      "dragHint": "Drag to rotate, pick a colour below",
+      "fallbackHint": "This browser does not support 3D, so a studio photo is shown instead",
+      "liveryLabel": "Livery",
+      "liveries": {
+        "ignition": "Ignition Orange",
+        "volt": "Volt Lime",
+        "coolant": "Coolant Cyan",
+        "carbon": "Carbon Matt"
+      }
+    },
+    "marquee": {
+      "label": "Marques currently in the inventory"
+    },
+    "featured": {
+      "eyebrow": "This week's picks",
+      "title": "The four units people ask about most",
+      "lead": "Chosen because their condition is tidy and their paperwork is complete, not because their margin is the fattest."
+    },
+    "categories": {
+      "eyebrow": "Categories",
+      "title": "Start from how you actually ride",
+      "count": "{count} units"
+    },
+    "values": {
+      "eyebrow": "How we work",
+      "title": "Six things we settle before a machine changes hands",
+      "lead": "We do not promise a used bike that feels brand new. We promise you will know exactly what you are buying.",
+      "inspection": {
+        "title": "Sixty-point inspection",
+        "body": "Engine, chassis, electrics, brakes and tyres are checked one by one. Negative findings get written down, not hidden."
+      },
+      "history": {
+        "title": "History you can read",
+        "body": "Service book, repair records and road-tax status are summarised on a single sheet before you arrive."
+      },
+      "pricing": {
+        "title": "Open pricing",
+        "body": "The price is on the listing. Any additional cost such as ownership transfer or delivery is quoted as a figure before we shake hands."
+      },
+      "paperwork": {
+        "title": "Paperwork handled",
+        "body": "Registration, ownership book and transfer process are managed for you, including a realistic estimate of time and cost."
+      },
+      "delivery": {
+        "title": "Inter-city delivery",
+        "body": "Collect at the showroom or have the unit shipped in an enclosed trailer, at a price agreed up front."
+      },
+      "aftercare": {
+        "title": "Workshop & parts referrals",
+        "body": "We connect you with the specialist workshops and parts channels we use ourselves for machines of this type."
+      }
+    },
+    "process": {
+      "eyebrow": "Buying process",
+      "title": "Four steps, all of them written down",
+      "lead": "A big-capacity motorcycle is not a one-click checkout, so the process is sequential and documented on purpose.",
+      "browse": {
+        "title": "Choose a unit",
+        "body": "Compare specifications and prices in the catalogue. Flag up to three units to see them side by side."
+      },
+      "inspect": {
+        "title": "Inspect bike & papers",
+        "body": "Visit the showroom or ask for a video call. We show you the machine, the inspection findings and the documents."
+      },
+      "agree": {
+        "title": "Agree over WhatsApp",
+        "body": "Negotiation, payment options and cost breakdown are written in the chat so both sides hold the same record."
+      },
+      "handover": {
+        "title": "Handover",
+        "body": "Final payment, a joint re-check, then collection or delivery. Documents follow on the schedule you agreed to."
+      }
+    },
+    "editorial": {
+      "workshop": {
+        "eyebrow": "Unit preparation",
+        "title": "What happens before a unit gets listed",
+        "body": "A pre-owned machine does not go straight to the camera. There is an inspection sequence to clear first, and its outcome decides whether we take the bike in or turn it away.",
+        "points": [
+          "Compression, leaks and chain-and-sprocket condition checked",
+          "ECU read-out to surface any stored fault codes",
+          "Brakes, tyres and suspension measured, not estimated",
+          "Detail photos including scuffs and replaced parts"
+        ]
+      },
+      "ride": {
+        "eyebrow": "After handover",
+        "title": "We stay reachable once the keys change hands",
+        "body": "Sportbikes need more disciplined maintenance than a commuter. We help you set up the first steps rather than disappearing after payment.",
+        "points": [
+          "First service schedule and a list of consumables",
+          "Recommended tyre pressures and a baseline suspension setting",
+          "Referrals to specialist workshops in your city where available",
+          "Help with document questions after the ownership transfer"
+        ]
+      }
+    },
+    "testimonials": {
+      "eyebrow": "Sample review layout",
+      "title": "What buyers usually value most",
+      "lead": "Written as examples to demonstrate the page layout.",
+      "note": "The quotes above are illustrative samples for this demo layout, not real customer reviews.",
+      "t1": {
+        "quote": "When I asked about the service history, what came out was the service book, not a story. That is why I went ahead.",
+        "author": "Rifqi A.",
+        "unit": "Kawasaki Z900RS"
+      },
+      "t2": {
+        "quote": "Before flying to Jakarta I got a walk-around video call. On arrival the bike was exactly as shown.",
+        "author": "Dewi P.",
+        "unit": "Yamaha MT-09"
+      },
+      "t3": {
+        "quote": "The ownership transfer costs were spelled out in the chat from the start, so nothing surprising turned up at the end.",
+        "author": "Bayu S.",
+        "unit": "Ducati Panigale V4 R"
+      }
+    }
+  },
+  "faq": {
+    "eyebrow": "Common questions",
+    "title": "What people ask most often",
+    "lead": "Still unanswered? Send a WhatsApp message and we will reply during opening hours.",
+    "items": {
+      "inspection": {
+        "q": "What exactly is checked on a pre-owned unit?",
+        "a": "The inspection covers the engine (compression, leaks, noise), chassis and running gear, electrics including an ECU fault-code read-out, the brake system, tyres, and the completeness of the documents. We show you the summary before you decide, including the parts that need attention."
+      },
+      "documents": {
+        "q": "What about registration, ownership book and road tax?",
+        "a": "Every pre-owned unit lists its road-tax validity on its page. The ownership book and registration are checked for authenticity and for a match between their numbers and the machine itself. Ownership transfer and tax renewal can be handled for you, at a cost quoted beforehand."
+      },
+      "testRide": {
+        "q": "Can I take a test ride?",
+        "a": "For pre-owned units we run the engine up to temperature and inspect it together in the showroom area. A road test depends on the unit, its documents and your licence, so please raise it on WhatsApp first."
+      },
+      "financing": {
+        "q": "Is financing available?",
+        "a": "We can refer you to third-party finance companies. The estimator on each unit page uses the flat-rate method and is illustrative only: the rate, fees and final approval are decided by the finance company after they review your documents."
+      },
+      "delivery": {
+        "q": "Do you deliver to other cities?",
+        "a": "Yes. Delivery uses an enclosed trailer, and the cost is calculated from distance and the number of units. You get the estimate before the agreement, not after payment."
+      },
+      "tradeIn": {
+        "q": "Do you take trade-ins?",
+        "a": "We consider trade-ins on sportbikes. Send photos, mileage, year and documents over WhatsApp; the final valuation happens after a physical inspection."
+      },
+      "warranty": {
+        "q": "Is there a warranty?",
+        "a": "New units carry the official importer's warranty on the manufacturer's terms. Pre-owned units have no factory warranty; what we offer instead is full disclosure of the inspection findings and the chance to examine the bike before buying."
+      },
+      "foreignBuyer": {
+        "q": "I am outside Jakarta or abroad — how does it work?",
+        "a": "We can run a walk-around video call and send detailed photos plus the inspection findings. Payment and delivery are arranged in stages, and every agreement stays recorded in the chat."
+      }
+    }
+  },
+  "about": {
+    "meta": {
+      "title": "About OKTAN",
+      "description": "The story behind OKTAN: a demonstration showroom for new and pre-owned sportbikes built on documented inspections and open pricing."
+    },
+    "hero": {
+      "eyebrow": "About us",
+      "title": "A sportbike dealer that answers the hard questions",
+      "lead": "We were built on a simple habit: name the faults first, talk about price second."
+    },
+    "stats": {
+      "founded": "Started in",
+      "units": "Units listed",
+      "checks": "Inspection points"
+    },
+    "intro": {
+      "p1": "OKTAN started in a small garage that held more spanners than motorcycles. The habit back then was simple: strip whatever looked doubtful on every bike that came in, then write down what needed replacing. Those notes became the inspection standard we still use.",
+      "p2": "Indonesia's sportbike market has a recurring problem: great photos, vague history. We chose the slower but clearer route — if a machine's past cannot be explained, we do not list it, however attractive the asking price.",
+      "p3": "This site itself is a technical demonstration: the units, prices and histories on these pages are sample data, and the photography comes from freely licensed collections. The structure, the buying flow and the way information is written are the serious part."
+    },
+    "principles": {
+      "title": "Principles we hold to",
+      "transparency": {
+        "title": "Faults get named first.",
+        "body": "Scuffs, replaced parts or overdue services are disclosed before price comes up."
+      },
+      "condition": {
+        "title": "Condition is measured, not guessed.",
+        "body": "Pad thickness, tyre depth and leaks are checked with tools and the results written down."
+      },
+      "documents": {
+        "title": "Complete papers or no sale.",
+        "body": "A unit whose documents cannot be verified never enters our catalogue."
+      },
+      "noPressure": {
+        "title": "No manufactured urgency.",
+        "body": "We do not use fake countdowns or last-one-in-stock claims to speed up a decision."
+      }
+    },
+    "timeline": {
+      "eyebrow": "Journey",
+      "title": "Four points that changed how we work",
+      "lead": "The years on this timeline are part of the demo scenario.",
+      "items": {
+        "start": {
+          "title": "The first garage",
+          "body": "Started with repairs and limited buying and selling inside a circle of riding friends."
+        },
+        "workshop": {
+          "title": "An inspection standard",
+          "body": "A sixty-point checklist was written so every unit is judged by the same measure."
+        },
+        "network": {
+          "title": "Workshop network",
+          "body": "Partnerships with specialist workshops and parts suppliers for high-performance engines."
+        },
+        "digital": {
+          "title": "Digital catalogue",
+          "body": "A bilingual online catalogue with unit telemetry, comparison and WhatsApp enquiries."
+        }
+      }
+    },
+    "editorial": {
+      "prep": {
+        "eyebrow": "Preparation bay",
+        "title": "An older machine is not a careless one",
+        "body": "Heritage and modern-classic units get different treatment: what we protect is not only performance but the originality of the details. We fix what needs fixing and leave alone what is still original.",
+        "points": [
+          "Original paint is kept as long as it is still sound",
+          "Replacement parts are recorded, including brand and reason",
+          "Older wiring is inspected circuit by circuit",
+          "Photos are taken without retouching that disguises age"
+        ]
+      }
+    },
+    "team": {
+      "eyebrow": "Visiting",
+      "title": "Come by, look closely, ask everything",
+      "lead": "This demonstration showroom sits in South Jakarta. Let us know first so the unit you want to see is ready."
+    }
+  },
+  "contact": {
+    "meta": {
+      "title": "Contact & visits",
+      "description": "Reach OKTAN over WhatsApp or email, or arrange a visit to the demonstration showroom in South Jakarta."
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "title": "One message, a straight answer",
+      "lead": "We reply with the unit's current condition, the inspection findings and a cost breakdown. No obligation to buy."
+    },
+    "address": {
+      "street": "Jl. Panglima Polim Raya No. 27"
+    },
+    "hours": {
+      "weekdays": "Monday – Friday, 10:00 – 19:00 WIB",
+      "weekdaysShort": "Mon – Fri, 10:00 – 19:00 WIB",
+      "saturday": "Saturday 10:00 – 17:00",
+      "sunday": "Closed on Sunday"
+    },
+    "channels": {
+      "whatsappValue": "Fastest channel",
+      "whatsappMeta": "The message is pre-filled — you only press send",
+      "email": "Email",
+      "emailMeta": "Better for long questions and document attachments",
+      "showroom": "Showroom",
+      "openMaps": "Open in Maps",
+      "hours": "Opening hours"
+    },
+    "mail": {
+      "subject": "Enquiry from the OKTAN website",
+      "body": "Hello OKTAN,\n\nI would like to ask about a unit listed on your website.\n\nThank you."
+    },
+    "form": {
+      "eyebrow": "Form",
+      "title": "Compose your message",
+      "lead": "Fill in the fields below, then press the button to open WhatsApp with the message already written.",
+      "name": "Name",
+      "namePlaceholder": "Your full name",
+      "phone": "WhatsApp number",
+      "phonePlaceholder": "08xxxxxxxxxx",
+      "email": "Email",
+      "emailPlaceholder": "your.name{'@'}example.com",
+      "emailHint": "Optional — add it if you would rather be answered by email.",
+      "interest": "Reason",
+      "interestPlaceholder": "Choose a reason",
+      "interests": {
+        "buy": "Buying a unit",
+        "sell": "Selling my motorcycle",
+        "trade": "Trade-in",
+        "service": "Maintenance question",
+        "other": "Something else"
+      },
+      "message": "Message",
+      "messagePlaceholder": "Mention the unit you are interested in, when you could visit, or your specific question.",
+      "submit": "Open WhatsApp",
+      "emailInstead": "Send by email instead",
+      "privacyNote": "This form does not send anything to our servers. Your input is only used to compose a message in the WhatsApp or email app on your own device."
+    },
+    "errors": {
+      "name": "Please enter your name, at least 2 characters.",
+      "phone": "That WhatsApp number looks incomplete.",
+      "email": "That email address does not look right.",
+      "message": "Please add a little more detail, at least 10 characters."
+    },
+    "checklist": {
+      "title": "What to bring to a viewing",
+      "items": {
+        "id": "ID and a valid motorcycle licence for the joint inspection",
+        "budget": "Your budget range and how you plan to pay",
+        "unit": "A list of units you want to see so we can prepare them",
+        "tradeIn": "Your motorcycle's documents if you are considering a trade-in"
+      },
+      "note": "Unannounced visits are welcome too — some units may simply be in the inspection bay."
+    }
+  },
+  "compliance": {
+    "meta": {
+      "title": "Compliance & disclosure",
+      "description": "A full account of what the OKTAN site is, where its data and photography come from, and which Indonesian consumer rules apply to motorcycle sales."
+    },
+    "hero": {
+      "eyebrow": "Compliance",
+      "title": "What you should know about this site",
+      "lead": "This page explains the site's status, where its data comes from, where its photos come from, and the rules we work to."
+    },
+    "banner": "This site is a web design and engineering demonstration. OKTAN is not a registered business, the catalogue is not real stock, and no transaction can be completed through this site.",
+    "updated": "31 July 2026",
+    "seeCredits": "See photo credits",
+    "sections": [
+      {
+        "heading": "Site status and identity",
+        "body": [
+          "OKTAN Superbike Gallery is a placeholder brand name created for a portfolio demonstration. The name, logo, address, opening hours and founding year on this site are part of a sample scenario, not the details of a registered company.",
+          "That is why the site carries no business licence number, tax number or trade registration. Before any real commercial use, every legal identity detail must be replaced with accurate, verifiable information."
+        ]
+      },
+      {
+        "heading": "Unit and pricing data",
+        "body": [
+          "The twelve units in the catalogue are sample data. Prices, mileage, number of keepers, service history and road-tax validity are plausible illustrative figures for the Indonesian market, but they do not refer to any specific motorcycle that is actually for sale.",
+          "Performance specifications (power, torque, displacement, weight) follow the manufacturers' published figures and have been rounded. Weights use the kerb figure where available. For a real transaction, every number must be verified against the physical unit and its documents.",
+          "Vehicle marques and model names mentioned here are the trademarks of their respective owners. They are used descriptively to identify the type of machine, and imply no dealership, affiliation or endorsement by the manufacturers."
+        ]
+      },
+      {
+        "heading": "Photography sources and licences",
+        "body": [
+          "All motorcycle and atmosphere photography on this site comes from Wikimedia Commons and is used under its licences: CC0, public domain, CC BY or CC BY-SA. These photos are not shoots of units for sale.",
+          "The CC BY and CC BY-SA licences require the author and licence to be named. Per-file attribution is published on the Photo credits page, and that attribution file is generated by the asset script so it can never fall behind the images actually shipped.",
+          "For genuine commercial use we recommend replacing every photo with your own unit photography, so both the look and the licensing obligations stay fully under your control."
+        ]
+      },
+      {
+        "heading": "The instalment estimator is not a credit offer",
+        "body": [
+          "The calculator on each unit page uses the flat-rate method with the fixed assumed rate shown on screen. The result is a rough estimate to help frame an early conversation.",
+          "It is not a credit offer, not a financing approval, and it excludes administration fees, insurance, provisioning, late-payment penalties and risk assessment. The real scheme is set by a licensed finance company after a formal application."
+        ]
+      },
+      {
+        "heading": "Consumer protection",
+        "body": [
+          "Selling motor vehicles to consumers in Indonesia is governed by Law No. 8 of 1999 on Consumer Protection, which includes the duty to give correct, clear and honest information about a product's condition and a prohibition on misleading advertising.",
+          "Accordingly, condition information on a real listing must disclose defects or important notes known to the seller, not only the favourable side. This demonstration site states that recommendation explicitly so nothing here reads as a claim of perfect condition.",
+          "New units follow the official importer's warranty terms. Pre-owned units carry no factory warranty, and that must be stated plainly before any agreement."
+        ]
+      },
+      {
+        "heading": "Documents, road tax and ownership transfer",
+        "body": [
+          "Vehicle ownership in Indonesia is evidenced by the BPKB ownership book and the STNK registration. Any real transaction must include checking that the frame and engine numbers match the documents, plus the road-tax and blocking status.",
+          "Transfer fees, title-change duties and tax renewal follow the tariffs applicable in each region. Cost estimates should be given in writing before an agreement so they never appear as an unagreed extra."
+        ]
+      },
+      {
+        "heading": "Riding safety",
+        "body": [
+          "Large-capacity sportbikes demand experience, protective equipment and the correct licence. We do not publish content that encourages excessive speed or riding on public roads beyond legal limits.",
+          "Atmosphere photography showing a rider leaning into a corner comes from freely licensed collections and is not intended as an invitation to repeat similar manoeuvres on public roads."
+        ]
+      },
+      {
+        "heading": "Accessibility and technology",
+        "body": [
+          "This site targets WCAG 2.1 level AA: sufficient text contrast, a visible focus order, ARIA labelling on interactive components, and respect for the prefers-reduced-motion setting.",
+          "The 3D showpiece on the home page is an optional enhancement. If the browser lacks WebGL, if it errors, or if the visitor asks for reduced motion, the site falls back to a static photo without losing any information.",
+          "If you hit an accessibility barrier, please tell us through the contact channels. We treat accessibility fixes as defect fixes, not feature requests."
+        ]
+      },
+      {
+        "heading": "Updates to this page",
+        "body": [
+          "Whenever a feature, a data set or a third-party asset changes, this page and the project documentation are updated in the same change. The date at the top of the page shows the last revision.",
+          "If any part of this reads as unclear or potentially misleading, we want to hear it. A correction is better than a claim nobody can stand behind."
+        ]
+      }
+    ]
+  },
+  "privacy": {
+    "meta": {
+      "title": "Privacy policy",
+      "description": "What the OKTAN site stores, what it does not store, and how the contact form works without sending data to a server."
+    },
+    "hero": {
+      "eyebrow": "Privacy",
+      "title": "Very little data, all of it explained",
+      "lead": "This site runs no analytics, sets no tracking pixels, and never stores what you type into the form."
+    },
+    "updated": "31 July 2026",
+    "sections": [
+      {
+        "heading": "Summary",
+        "body": [
+          "This is a static site with no visitor database. We do not install Google Analytics, social media pixels or third-party tracking scripts.",
+          "Two things are stored in your browser: one language-preference cookie, and one localStorage entry holding the units you flagged for comparison. Both stay on your device."
+        ]
+      },
+      {
+        "heading": "Language cookie",
+        "body": [
+          "When you switch between Bahasa Indonesia and English, that choice is stored in a cookie called i18n_locale so your next visit opens in the same language.",
+          "The cookie is functional, contains no identity information, and is not shared with anyone. You can delete it at any time from your browser settings."
+        ]
+      },
+      {
+        "heading": "Comparison list",
+        "body": [
+          "Units you flag for comparison are stored in localStorage under the key oktan.compare, purely so your selection survives a page reload.",
+          "This data is never transmitted anywhere. Pressing Clear in the comparison tray removes it."
+        ]
+      },
+      {
+        "heading": "Contact form",
+        "body": [
+          "The form on the Contact page does not send data to our servers, because this site has no receiving endpoint. Your input is used to compose message text, which then opens in the WhatsApp app or email client on your device.",
+          "In other words, nothing moves until you press send in that app yourself. Once the message is sent, the conversation is governed by that provider's privacy policy."
+        ]
+      },
+      {
+        "heading": "Third-party services",
+        "body": [
+          "Font files are loaded from Google Fonts, so your IP address is visible to that service while the fonts download. All other photos, scripts and styles are served from this site's own domain.",
+          "WhatsApp links point to WhatsApp's wa.me, and map links point to Google Maps. Opening them takes you into a third-party service with its own privacy policy. We deliberately do not embed maps or videos in the pages, so no third-party cookies are set without your knowledge."
+        ]
+      },
+      {
+        "heading": "Server logs",
+        "body": [
+          "The hosting provider may keep standard technical logs such as IP address, access time and user agent for security and maintenance. We do not use those logs to build marketing profiles.",
+          "For a real deployment, the hosting provider in use should be named on this page together with where the data is stored."
+        ]
+      },
+      {
+        "heading": "Your rights and contact",
+        "body": [
+          "Because we hold no personal data server-side, there is no archive to request or erase. If you have sent us a WhatsApp message or an email, you can ask us to delete that conversation on our side.",
+          "Privacy questions can be sent through the channels listed on the Contact page."
+        ]
+      }
+    ]
+  },
+  "terms": {
+    "meta": {
+      "title": "Terms of use",
+      "description": "Terms of use for the OKTAN site: the status of listings, how prices are quoted, limits of liability, and governing law."
+    },
+    "hero": {
+      "eyebrow": "Terms",
+      "title": "The ground rules for using this site",
+      "lead": "Short, and without language designed to obscure the point."
+    },
+    "updated": "31 July 2026",
+    "sections": [
+      {
+        "heading": "Acceptance",
+        "body": [
+          "By using this site you are taken to have read and accepted the terms on this page, along with the statements on the Compliance page and in the Privacy policy.",
+          "If you do not agree with any part of them, please stop using the site."
+        ]
+      },
+      {
+        "heading": "Nature of the listings",
+        "body": [
+          "The catalogue on this site contains sample data for demonstration purposes. Even in a real deployment, a vehicle listing is an invitation to discuss, not a legally binding offer.",
+          "A sale is only formed after the unit has been inspected, the final price agreed, and both sides have confirmed in writing."
+        ]
+      },
+      {
+        "heading": "Prices and fees",
+        "body": [
+          "Prices are shown in Rupiah for a single unit and exclude ownership transfer, title-change duty, road-tax renewal, insurance, accessories and delivery unless stated otherwise.",
+          "Prices may change without prior notice. The figure that applies is the one confirmed in writing in the conversation before payment."
+        ]
+      },
+      {
+        "heading": "Availability",
+        "body": [
+          "Availability on this demonstration site is static. In a real deployment, a unit can sell through another channel before its page is updated.",
+          "Availability should therefore always be confirmed in conversation before you travel or pay."
+        ]
+      },
+      {
+        "heading": "Content and intellectual property",
+        "body": [
+          "The text, layout and code of this site were produced for portfolio purposes. The photography comes from third parties under free licences and is credited on the Photo credits page as those licences require.",
+          "Vehicle marques and model names belong to their respective owners and are used descriptively, without implying affiliation."
+        ]
+      },
+      {
+        "heading": "Limits of liability",
+        "body": [
+          "This site is provided as is. We work to keep the information accurate but do not warrant that every specification, availability status or cost estimate is free of error.",
+          "A vehicle purchase decision should rest on physical inspection, document verification and, where useful, an independent third-party assessment — not on a web page alone."
+        ]
+      },
+      {
+        "heading": "Governing law",
+        "body": [
+          "These terms are governed by the laws of the Republic of Indonesia. For a real deployment, dispute resolution and court jurisdiction need to be stated specifically.",
+          "Changes to these terms will appear on this page with a new revision date."
+        ]
+      }
+    ]
+  },
+  "credits": {
+    "meta": {
+      "title": "Photo credits",
+      "description": "Full attribution for every photo used on the OKTAN site, including author, licence and a link to the source."
+    },
+    "hero": {
+      "eyebrow": "Attribution",
+      "title": "Every photo has an author",
+      "lead": "The photography on this site comes from freely licensed collections. CC BY and CC BY-SA require attribution — here it is."
+    },
+    "intro": "This list is generated by the asset script that downloads and processes the photos, so it always matches the images actually shipped with the site. One source photo can produce several output frames, for example a main frame and a detail crop.",
+    "licencesUsed": "Licences used in this collection:",
+    "replaceNote": "For commercial use, replace every photo with your own unit photography so both the usage rights and the image quality stay fully under your control.",
+    "tableCaption": "Photo attribution list with author and licence",
+    "columns": {
+      "photo": "Source file",
+      "author": "Author",
+      "licence": "Licence",
+      "frames": "Frames"
+    },
+    "note": "These photos depict comparable models, not one specific unit for sale. Some frames are re-crops of the same source photo."
+  },
+  "legal": {
+    "lastUpdated": "Updated {date}"
+  },
+  "error": {
+    "notFound": {
+      "title": "Page not found",
+      "body": "The unit you were looking for may have been released or its link changed. Have a look at what is currently listed."
+    },
+    "generic": {
+      "title": "Something went wrong",
+      "body": "That is an error on our side. Try reloading the page, or contact us on WhatsApp if it keeps happening."
+    },
+    "backHome": "Back to home"
+  },
+  "footer": {
+    "pitch": "A gallery of new and pre-owned sportbikes built on documented inspections, readable history and openly stated prices.",
+    "explore": "Explore",
+    "legal": "Legal",
+    "reach": "Reach us",
+    "rights": "All rights reserved.",
+    "built": "Built with Nuxt · Bahasa Indonesia & English"
+  },
+  "wa": {
+    "enquiry": {
+      "general": "Hello OKTAN, I was on your website and would like to ask about the units you have listed.",
+      "bike": "Hello OKTAN, I am interested in the %unit% (%year%) listed at %price%, odometer %mileage%.\n\nUnit page: %url%\n\nCould you share its current condition, the inspection findings, and a time to see it?",
+      "compare": "Hello OKTAN, I am comparing these units:\n\n%list%\n\nCould you advise on the condition and costs of each?",
+      "contact": "Hello OKTAN,\n\nName: %name%\nWhatsApp: %phoneNumber%\nEmail: %email%\nReason: %interest%\n\n%message%"
+    }
+  },
+  "bikes": {
+    "ducati-panigale-v4r": {
+      "tagline": "A 998 cc race-homologation engine that revs higher than anything else in its class.",
+      "description": "The Panigale V4 R is Ducati's homologation build for Superbike racing: displacement is dropped to 998 cc so the engine can rev harder, with a chassis and aerodynamics shaped around track requirements. This sample unit shows low mileage and a complete service book, which suits a collector or scheduled track use. Note that the R's engine service intervals are stricter than a standard Panigale's, and parts pricing follows that character."
+    },
+    "bmw-s1000rr": {
+      "tagline": "An inline-four supersport with the most cooperative electronics package in the class.",
+      "description": "The S 1000 RR is known for making a very large output feel manageable, thanks to ride modes, IMU-based traction control and an up/down quickshifter. This new unit comes with the official importer's warranty and factory-standard equipment. For a rider who wants a track-capable machine without giving up road usability, this model is usually where the conversation starts."
+    },
+    "honda-cbr1000rr-r-sp": {
+      "tagline": "The SP version, with semi-active Öhlins suspension and Grand Prix colours.",
+      "description": "The Fireblade SP takes the CBR1000RR-R and adds electronically controlled Öhlins suspension and stronger brakes, a package shaped by Honda's racing programme. This sample unit shows moderate mileage, a complete service history and road tax with plenty of time left. Its engine character rewards high revs, so riders who spend most of their time in traffic often end up happier on a naked bike."
+    },
+    "yamaha-yzf-r1": {
+      "tagline": "The 2015-onward crossplane generation, with a sound of its own.",
+      "description": "This generation of R1 uses the crossplane engine, which makes power delivery feel more progressive and gives it a voice distinct from a conventional inline four. The sample unit has covered a reasonable distance for its age, with partial service history and new tyres fitted. A compelling option for anyone who wants big supersport performance well below current-model money, provided a maintenance budget is set aside."
+    },
+    "kawasaki-ninja-zx10r": {
+      "tagline": "Kawasaki's Superbike basis, with a chassis that stays composed at speed.",
+      "description": "The ZX-10R is built around Superbike racing requirements, and it shows in chassis stability and brakes that stay consistent when hot. This sample unit is a first-owner bike with a complete service book and road tax valid well ahead. Its ergonomics are friendlier than some rivals for road use, though the riding position is still very much supersport."
+    },
+    "aprilia-rsv4-rr": {
+      "tagline": "Noale's compact V4, one of the most praised chassis in the supersport class.",
+      "description": "The RSV4 uses a narrow V4 that lets the chassis be built very short and quick to change direction. This sample unit has covered a fair distance with partial service history, and comes with an Akrapovič exhaust and frame sliders fitted. For riders who prioritise chassis feel and V4 sound, a machine like this offers something an inline four cannot easily replicate."
+    },
+    "ktm-1290-super-duke-r": {
+      "tagline": "A 1301 cc V-twin naked bike with heavy torque from low revs.",
+      "description": "The Super Duke R uses the LC8 V-twin, which produces strong torque from low in the range and makes the bike feel fast without chasing high revs. This sample unit is a first-owner machine with a complete service book. Its character suits winding roads and everyday use, though rear tyres tend to wear faster than on smaller-capacity bikes."
+    },
+    "yamaha-mt09": {
+      "tagline": "An 890 cc triple that sets the benchmark for middleweight nakeds.",
+      "description": "The MT-09 pairs a strong mid-range triple with low weight and an electronics package that now includes cornering ABS and a quickshifter. This new unit comes with the official importer's warranty. For riders stepping up from a 250–650 cc machine, it is often the easiest jump to make without feeling like too much bike."
+    },
+    "mv-agusta-brutale-1000-rs": {
+      "tagline": "A four-cylinder naked from Varese, with detailing you do not see elsewhere.",
+      "description": "The Brutale 1000 RS combines a high-output inline four with the finishing detail and four-outlet exhaust that define MV Agusta. This new unit comes with the official importer's warranty and factory-standard equipment. Worth weighing: MV Agusta's service network is smaller than the Japanese marques', so a maintenance plan is best discussed up front."
+    },
+    "triumph-street-triple-r": {
+      "tagline": "A 675 cc triple, a sensible entry point into European sportbikes.",
+      "description": "The Street Triple 675 is known for being light, easy to place and blessed with a distinctive triple soundtrack. This sample unit has high mileage, three previous keepers and partial service history, which is why it is the most affordable machine in this catalogue. We state that plainly: a bike like this is enjoyable every day, as long as routine maintenance is budgeted for."
+    },
+    "kawasaki-z900rs": {
+      "tagline": "Classic looks with a modern 948 cc engine and approachable handling.",
+      "description": "The Z900RS borrows the design language of the 1972 Z1 and pairs it with a modern 948 cc engine tuned deliberately for smoother delivery. This sample unit is a first-owner bike with original paint, a complete service book and road tax valid well ahead. It suits riders who want the retro look without compromising day-to-day reliability."
+    },
+    "ducati-multistrada-v4s": {
+      "tagline": "A V4 sport tourer with semi-active suspension and adaptive cruise control.",
+      "description": "The Multistrada V4 S is built for distance without abandoning sporting character: a high-output V4, semi-active suspension and rider aids including radar-based adaptive cruise control. This new unit comes with the official importer's warranty. It is the heaviest machine in this catalogue, so it suits loaded touring rather than darting through city traffic."
+    }
+  }
+}
