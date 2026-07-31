@@ -59,6 +59,12 @@ export default defineNuxtConfig({
   // raster images (pnpm og). See TODO.md.
   ogImage: { enabled: false },
 
+  // Static pages are discovered automatically; the 12 `[slug]` unit pages come
+  // from the endpoint below so the sitemap covers the whole catalogue.
+  sitemap: {
+    sources: ['/api/__sitemap__/urls'],
+  },
+
   i18n: {
     baseUrl: siteUrl,
     strategy: 'prefix_except_default',
@@ -72,10 +78,6 @@ export default defineNuxtConfig({
       cookieKey: 'i18n_locale',
       redirectOn: 'root',
       alwaysRedirect: false,
-    },
-    bundle: {
-      // Silences the v10 optimize-directive advisory; we use $t/useI18n only.
-      optimizeTranslationDirective: false,
     },
   },
 
@@ -91,7 +93,6 @@ export default defineNuxtConfig({
     css: {
       preprocessorOptions: {
         scss: {
-          api: 'modern-compiler',
           additionalData: `@use "${scssShared}" as *;`,
         },
       },

@@ -13,13 +13,14 @@ const props = defineProps<{ priceIdr: number }>()
 
 const { priceExact } = useCurrency()
 
-const ratio = ref(downPaymentRatios[1] ?? 0.3)
+// Named dpRatio, not `ratio`: utils/format exports an auto-imported ratio().
+const dpRatio = ref(downPaymentRatios[1] ?? 0.3)
 const months = ref(tenors[1] ?? 24)
 
 const result = computed(() =>
   estimate({
     priceIdr: props.priceIdr,
-    downPaymentRatio: ratio.value,
+    downPaymentRatio: dpRatio.value,
     months: months.value,
     annualRate: indicativeAnnualRate,
   }),
@@ -43,10 +44,10 @@ const ratePercent = computed(() => Math.round(indicativeAnnualRate * 1000) / 10)
             v-for="option in downPaymentRatios"
             :key="option"
             class="finance__option"
-            :class="{ 'finance__option--on': ratio === option }"
+            :class="{ 'finance__option--on': dpRatio === option }"
             type="button"
-            :aria-pressed="ratio === option"
-            @click="ratio = option"
+            :aria-pressed="dpRatio === option"
+            @click="dpRatio = option"
           >
             {{ Math.round(option * 100) }}%
           </button>

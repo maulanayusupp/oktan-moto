@@ -35,7 +35,6 @@ export function usePageSeo(input: PageSeoInput | (() => PageSeoInput)) {
     description: () => resolved.value.description,
     robots: () => (resolved.value.noindex ? 'noindex, nofollow' : 'index, follow'),
 
-    ogType: () => resolved.value.type ?? 'website',
     ogTitle: () => `${resolved.value.title} · ${brandConfig.longName}`,
     ogDescription: () => resolved.value.description,
     ogUrl: () => canonical.value,
@@ -57,6 +56,9 @@ export function usePageSeo(input: PageSeoInput | (() => PageSeoInput)) {
 
   useHead({
     link: [{ rel: 'canonical', href: canonical }],
+    // og:type is set here rather than through useSeoMeta: "product" is a valid
+    // Open Graph type but sits outside useSeoMeta's narrower union.
+    meta: [{ property: 'og:type', content: computed(() => resolved.value.type ?? 'website') }],
   })
 
   return { canonical, image }

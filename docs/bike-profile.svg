@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="560" viewBox="0 0 960 560">
+  <rect width="960" height="560" fill="#06070a"/>
+  
+  <line x1="0" y1="500" x2="960" y2="500" stroke="#2a3039" stroke-width="2"/>
+  <line x1="192" y1="514" x2="768" y2="514" stroke="#3fd8e8" stroke-width="2"/>
+  <text x="480" y="536" fill="#3fd8e8" font-family="monospace" font-size="14" text-anchor="middle">wheelbase 1.44 m</text>
+  <line x1="40" y1="168" x2="920" y2="168" stroke="#d4ff4f" stroke-width="1" stroke-dasharray="6 6" opacity="0.5"/>
+  <text x="46" y="160" fill="#d4ff4f" font-family="monospace" font-size="13">seat height ref 0.83 m</text>
+  <circle cx="192" cy="376" r="124" fill="#0a0b0d"/>
+  <circle cx="192" cy="376" r="70.56" fill="#2b313b"/>
+  <circle cx="192" cy="376" r="58.8" fill="none" stroke="#6f7684" stroke-width="3"/>
+  <circle cx="768" cy="376" r="124" fill="#0a0b0d"/>
+  <circle cx="768" cy="376" r="70.56" fill="#2b313b"/>
+  <circle cx="768" cy="376" r="58.8" fill="none" stroke="#6f7684" stroke-width="3"/>
+  <rect x="188" y="344" width="264" height="24" fill="#9aa3b0" transform="rotate(-5.156620156177409 320 356)"/>
+  <rect x="332" y="267" width="168" height="18" fill="#ffb199" transform="rotate(-17.188733853924695 416 276)"/>
+  <rect x="464" y="211.99999999999994" width="160" height="128" fill="#14171d" transform="rotate(0 544 276)"/>
+  <rect x="476" y="322" width="120" height="36" fill="#9aa3b0" transform="rotate(0 536 340)"/>
+  <line x1="627.7494986604055" y1="355.0737201667703" x2="428.25050133959456" y2="340.9262798332297" stroke="#9aa3b0" stroke-width="24" stroke-linecap="round"/>
+  <line x1="354.54340146959953" y1="345.1404012255825" x2="237.45659853040044" y2="318.8595987744175" stroke="#9aa3b0" stroke-width="46.400000000000006" stroke-linecap="round"/>
+  <polygon points="480,316 648,356 736,324 704,296 568,300" fill="#ff4a17" fill-opacity="1"/>
+  <rect x="404" y="194" width="200" height="20" fill="#ffb199" transform="rotate(6.875493541569878 504 204)"/>
+  <rect x="548" y="172" width="104" height="56.00000000000001" fill="#9aa3b0" transform="rotate(13.750987083139757 600 200)"/>
+  <polygon points="624,212 672,148 760,156 824,204 832,260 792,316 720,324 656,268" fill="#ff4a17" fill-opacity="1"/>
+  <polygon points="432,188 456,148 528,120 616,124 656,160 632,208 496,220" fill="#ff4a17" fill-opacity="1"/>
+  <polygon points="384,180 352,148 240,156 128,200 160,220 264,208 368,204" fill="#ff4a17" fill-opacity="1"/>
+  <polygon points="688,272 728,232 808,240 856,284 832,300 796,264 732,256 708,288" fill="#ff4a17" fill-opacity="1"/>
+  <rect x="316" y="152" width="104" height="20" fill="#0c0e12" transform="rotate(-1.7188733853924696 368 162)"/>
+  <line x1="768.855077977063" y1="376.4749051244212" x2="655.144922022937" y2="107.52509487557876" stroke="#9aa3b0" stroke-width="28.799999999999997" stroke-linecap="round"/>
+  <polygon points="664,116 720,68 784,132 704,148" fill="#9fdcff" fill-opacity="0.5"/>
+  <circle cx="664" cy="124" r="12" fill="#0c0e12"/>
+  <ellipse cx="832" cy="220" rx="18" ry="27" fill="#fff0dd"/>
+  <rect x="110" y="170" width="20" height="20" fill="#ff2a10" transform="rotate(0 120 180)"/>
+</svg>

@@ -10,7 +10,7 @@ const config = useRuntimeConfig()
 const siteUrl = String(config.public.siteUrl).replace(/\/$/, '')
 
 useHead({
-  htmlAttrs: computed(() => ({ lang: head.value.htmlAttrs?.lang ?? 'id' })),
+  htmlAttrs: { lang: computed(() => String(head.value.htmlAttrs?.lang ?? 'id')) },
   link: computed(() => head.value.link ?? []),
   meta: computed(() => head.value.meta ?? []),
   titleTemplate: (title) =>

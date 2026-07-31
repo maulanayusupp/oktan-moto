@@ -7,12 +7,19 @@
 // tail), which is what gives it a readable silhouette rather than a box on
 // wheels.
 //
+// All dimensions come from app/config/bike-model.config.ts (metres, ground at
+// y = 0), which scripts/render-bike-profile.mjs can render as a side-view SVG —
+// so the proportions are verifiable without opening a browser.
+//
 // three.js is imported dynamically so it never lands in the SSR bundle or the
 // initial client chunk. The caller (HeroStage.vue) shows a static poster until
 // `ready` flips, and keeps that poster if WebGL is unavailable or the visitor
 // prefers reduced motion.
 // =============================================================================
+import { bikeModel } from '~/config/bike-model.config'
+
 type Three = typeof import('three')
+type Point = readonly [number, number] | number[]
 
 export interface SceneLivery {
   paint: string
@@ -65,45 +72,48 @@ export function useSuperbikeScene(): SceneHandle {
   // --- Geometry helpers --------------------------------------------------------
 
   /** Extrudes a side-profile outline along Z and centres it on the axis. */
-  function profile(
-    t: Three,
-    points: [number, number][],
-    depth: number,
-    bevel = 0.025,
-  ): import('three').ExtrudeGeometry {
+  function profile(t: Three, spec: { points: readonly Point[]; depth: number; bevel: number }) {
     const shape = new t.Shape()
-    points.forEach(([x, y], index) => (index === 0 ? shape.moveTo(x, y) : shape.lineTo(x, y)))
+    spec.points.forEach((point, index) => {
+      const [x, y] = point as [number, number]
+      if (index === 0) shape.moveTo(x, y)
+      else shape.lineTo(x, y)
+    })
     shape.closePath()
     const geometry = new t.ExtrudeGeometry(shape, {
-      depth,
+      depth: spec.depth,
       bevelEnabled: true,
-      bevelThickness: bevel,
-      bevelSize: bevel,
+      bevelThickness: spec.bevel,
+      bevelSize: spec.bevel,
       bevelSegments: 3,
       curveSegments: 8,
     })
-    geometry.translate(0, 0, -depth / 2)
+    geometry.translate(0, 0, -spec.depth / 2)
     return track(geometry)
   }
 
-  function wheel(t: Three, x: number, radius: number, rimColor: number) {
+  function wheel(t: Three, x: number, rimColor: number) {
+    const { tyre: tyreRadius, tube } = bikeModel.wheels
+    const outer = tyreRadius + tube
     const group = new t.Group()
 
     const tyre = new t.Mesh(
-      track(new t.TorusGeometry(radius, radius * 0.3, 14, 44)),
+      track(new t.TorusGeometry(tyreRadius, tube, 14, 44)),
       track(new t.MeshStandardMaterial({ color: 0x0a0b0d, roughness: 0.95, metalness: 0.04 })),
     )
     group.add(tyre)
 
     const rim = new t.Mesh(
-      track(new t.CylinderGeometry(radius * 0.72, radius * 0.72, radius * 0.34, 28)),
+      track(new t.CylinderGeometry(tyreRadius * 0.72, tyreRadius * 0.72, tyreRadius * 0.36, 28)),
       track(new t.MeshStandardMaterial({ color: rimColor, metalness: 0.9, roughness: 0.3 })),
     )
     rim.rotation.x = Math.PI / 2
     group.add(rim)
 
     // Five-spoke star, the visual shorthand for a sportbike wheel.
-    const spokeGeometry = track(new t.BoxGeometry(radius * 1.36, radius * 0.16, radius * 0.3))
+    const spokeGeometry = track(
+      new t.BoxGeometry(tyreRadius * 1.4, tyreRadius * 0.16, tyreRadius * 0.3),
+    )
     const spokeMaterial = track(
       new t.MeshStandardMaterial({ color: rimColor, metalness: 0.85, roughness: 0.34 }),
     )
@@ -114,18 +124,52 @@ export function useSuperbikeScene(): SceneHandle {
     }
 
     const disc = new t.Mesh(
-      track(new t.CylinderGeometry(radius * 0.6, radius * 0.6, 0.012, 26)),
+      track(new t.CylinderGeometry(tyreRadius * 0.62, tyreRadius * 0.62, 0.012, 26)),
       track(new t.MeshStandardMaterial({ color: 0x6f7684, metalness: 1, roughness: 0.42 })),
     )
     disc.rotation.x = Math.PI / 2
-    disc.position.z = radius * 0.36
+    disc.position.z = tyreRadius * 0.36
     group.add(disc)
 
-    group.position.set(x, radius, 0)
+    // Sit on the tyre's OUTER radius so nothing sinks through the floor.
+    group.position.set(x, outer, 0)
     group.traverse((child) => {
       child.castShadow = true
     })
     return group
+  }
+
+  /** Box part from config: `at` is the centre in the side plane. */
+  function boxPart(
+    t: Three,
+    spec: { at: readonly number[]; size: readonly number[]; rotate?: number },
+    material: import('three').Material,
+    z = 0,
+  ) {
+    const [x, y] = spec.at
+    const [w, h, d] = spec.size
+    const mesh = new t.Mesh(track(new t.BoxGeometry(w, h ?? w, d ?? w)), material)
+    mesh.position.set(x ?? 0, y ?? 0, z)
+    if (spec.rotate) mesh.rotation.z = spec.rotate
+    return mesh
+  }
+
+  /** Cylinder part from config: size is [radius, length], rotate is about z. */
+  function tubePart(
+    t: Three,
+    spec: { at: readonly number[]; size: readonly number[]; rotate?: number },
+    material: import('three').Material,
+    z = 0,
+  ) {
+    const [x, y] = spec.at
+    const [radius, length] = spec.size
+    const mesh = new t.Mesh(
+      track(new t.CylinderGeometry(radius, radius, length ?? radius, 16)),
+      material,
+    )
+    mesh.position.set(x ?? 0, y ?? 0, z)
+    if (spec.rotate) mesh.rotation.z = spec.rotate
+    return mesh
   }
 
   function buildBike(t: Three, livery: SceneLivery) {
@@ -159,191 +203,50 @@ export function useSuperbikeScene(): SceneHandle {
       new t.MeshStandardMaterial({ color: 0x2a0b06, emissive: 0xff2a10, emissiveIntensity: 2.2 }),
     )
 
-    // Wheels + running gear -----------------------------------------------------
-    group.add(wheel(t, -0.62, 0.31, 0x2b313b))
-    group.add(wheel(t, 0.7, 0.31, 0x2b313b))
+    const { parts, profiles, offsets, wheels } = bikeModel
 
-    const swingarm = new t.Mesh(track(new t.BoxGeometry(0.56, 0.07, 0.055)), metal)
-    swingarm.position.set(-0.35, 0.35, 0)
-    swingarm.rotation.z = 0.06
-    for (const z of [-0.11, 0.11]) {
-      const arm = swingarm.clone()
-      arm.position.z = z
-      group.add(arm)
+    // Wheels + running gear ----------------------------------------------------
+    group.add(wheel(t, wheels.rearX, 0x2b313b))
+    group.add(wheel(t, wheels.frontX, 0x2b313b))
+
+    for (const z of offsets.swingarm) group.add(boxPart(t, parts.swingarm, metal, z))
+
+    // Frame rails in the accent colour — the livery's second tone.
+    for (const z of offsets.rails) {
+      group.add(boxPart(t, parts.railUpper, accent, z))
+      group.add(boxPart(t, parts.railLower, accent, z))
     }
 
-    // Trellis-ish frame rails in the accent colour.
-    const rail = track(new t.BoxGeometry(0.62, 0.05, 0.05))
-    for (const z of [-0.13, 0.13]) {
-      const upper = new t.Mesh(rail, accent)
-      upper.position.set(0.12, 0.56, z)
-      upper.rotation.z = -0.05
-      group.add(upper)
-
-      const lower = new t.Mesh(track(new t.BoxGeometry(0.42, 0.045, 0.045)), accent)
-      lower.position.set(-0.12, 0.41, z)
-      lower.rotation.z = 0.22
-      group.add(lower)
-    }
-
-    // Engine block + head ------------------------------------------------------
-    const block = new t.Mesh(track(new t.BoxGeometry(0.44, 0.3, 0.3)), carbon)
-    block.position.set(0.2, 0.4, 0)
-    group.add(block)
-
-    const head = new t.Mesh(track(new t.BoxGeometry(0.26, 0.14, 0.28)), metal)
-    head.position.set(0.28, 0.56, 0)
-    head.rotation.z = -0.24
-    group.add(head)
-
-    const sump = new t.Mesh(track(new t.BoxGeometry(0.3, 0.1, 0.24)), metal)
-    sump.position.set(0.18, 0.26, 0)
-    group.add(sump)
+    // Engine ------------------------------------------------------------------
+    group.add(boxPart(t, parts.engineBlock, carbon))
+    group.add(boxPart(t, parts.cylinderHead, metal))
+    group.add(boxPart(t, parts.sump, metal))
 
     // Bodywork: extruded side profiles ----------------------------------------
-    const fairing = new t.Mesh(
-      profile(
-        t,
-        [
-          [0.34, 0.52],
-          [0.62, 0.62],
-          [0.86, 0.56],
-          [0.88, 0.42],
-          [0.7, 0.3],
-          [0.44, 0.34],
-        ],
-        0.3,
-        0.03,
-      ),
-      paint,
-    )
-    group.add(fairing)
-
-    const tank = new t.Mesh(
-      profile(
-        t,
-        [
-          [0.0, 0.62],
-          [0.26, 0.7],
-          [0.48, 0.66],
-          [0.52, 0.56],
-          [0.16, 0.5],
-          [-0.02, 0.54],
-        ],
-        0.34,
-        0.045,
-      ),
-      paint,
-    )
-    group.add(tank)
-
-    const tailUnit = new t.Mesh(
-      profile(
-        t,
-        [
-          [-0.78, 0.7],
-          [-0.36, 0.74],
-          [-0.06, 0.66],
-          [-0.1, 0.58],
-          [-0.52, 0.54],
-          [-0.74, 0.6],
-        ],
-        0.2,
-        0.03,
-      ),
-      paint,
-    )
-    group.add(tailUnit)
-
-    const seat = new t.Mesh(track(new t.BoxGeometry(0.3, 0.06, 0.22)), dark)
-    seat.position.set(-0.2, 0.71, 0)
-    seat.rotation.z = 0.05
-    group.add(seat)
-
-    const bellypan = new t.Mesh(
-      profile(
-        t,
-        [
-          [-0.12, 0.26],
-          [0.44, 0.24],
-          [0.6, 0.3],
-          [0.42, 0.18],
-          [-0.06, 0.18],
-        ],
-        0.26,
-        0.02,
-      ),
-      paint,
-    )
-    group.add(bellypan)
-
-    const mudguard = new t.Mesh(
-      profile(
-        t,
-        [
-          [0.5, 0.5],
-          [0.78, 0.56],
-          [0.92, 0.46],
-          [0.84, 0.42],
-          [0.66, 0.44],
-          [0.52, 0.44],
-        ],
-        0.16,
-        0.02,
-      ),
-      paint,
-    )
-    group.add(mudguard)
-
-    // Front end ----------------------------------------------------------------
-    const forkGeometry = track(new t.CylinderGeometry(0.035, 0.035, 0.52, 16))
-    for (const z of [-0.11, 0.11]) {
-      const fork = new t.Mesh(forkGeometry, metal)
-      fork.position.set(0.72, 0.55, z)
-      fork.rotation.z = 0.4
-      group.add(fork)
+    for (const spec of [profiles.fairing, profiles.tank, profiles.tail, profiles.bellypan, profiles.mudguard]) {
+      group.add(new t.Mesh(profile(t, spec), paint))
     }
+    group.add(new t.Mesh(profile(t, profiles.screen), glass))
+    group.add(boxPart(t, parts.seat, dark))
 
-    const bar = new t.Mesh(track(new t.CylinderGeometry(0.022, 0.022, 0.44, 12)), dark)
+    // Front end ---------------------------------------------------------------
+    for (const z of offsets.forks) group.add(tubePart(t, parts.fork, metal, z))
+
+    const bar = tubePart(t, parts.handlebar, dark)
+    bar.rotation.z = 0
     bar.rotation.x = Math.PI / 2
-    bar.position.set(0.6, 0.8, 0)
     group.add(bar)
 
-    const screen = new t.Mesh(
-      profile(
-        t,
-        [
-          [0.52, 0.72],
-          [0.7, 0.78],
-          [0.8, 0.66],
-          [0.62, 0.64],
-        ],
-        0.22,
-        0.012,
-      ),
-      glass,
-    )
-    group.add(screen)
-
-    const headlight = new t.Mesh(track(new t.SphereGeometry(0.075, 18, 14)), lamp)
-    headlight.position.set(0.87, 0.5, 0)
-    headlight.scale.set(0.6, 0.9, 1)
+    // Lights ------------------------------------------------------------------
+    const headlight = new t.Mesh(track(new t.SphereGeometry(parts.headlight.size[0], 18, 14)), lamp)
+    headlight.position.set(parts.headlight.at[0]!, parts.headlight.at[1]!, 0)
+    headlight.scale.set(0.55, 0.9, 1)
     group.add(headlight)
+    group.add(boxPart(t, parts.taillight, tail))
 
-    const taillight = new t.Mesh(track(new t.BoxGeometry(0.05, 0.05, 0.16)), tail)
-    taillight.position.set(-0.79, 0.66, 0)
-    group.add(taillight)
-
-    // Exhaust ------------------------------------------------------------------
-    const header = new t.Mesh(track(new t.CylinderGeometry(0.03, 0.03, 0.5, 12)), metal)
-    header.rotation.z = Math.PI / 2 - 0.16
-    header.position.set(0.18, 0.2, 0.08)
-    group.add(header)
-
-    const silencer = new t.Mesh(track(new t.CylinderGeometry(0.062, 0.05, 0.3, 18)), metal)
-    silencer.rotation.z = Math.PI / 2 - 0.12
-    silencer.position.set(-0.34, 0.29, 0.12)
-    group.add(silencer)
+    // Exhaust: header tucked under the engine, silencer offset to one side ----
+    group.add(tubePart(t, parts.exhaustHeader, metal, 0.07))
+    group.add(tubePart(t, parts.silencer, metal, 0.11))
 
     group.traverse((child) => {
       child.castShadow = true
@@ -440,9 +343,10 @@ export function useSuperbikeScene(): SceneHandle {
       scene = new t.Scene()
       scene.fog = new t.Fog(0x06070a, 4.2, 11)
 
-      camera = new t.PerspectiveCamera(36, width / height, 0.1, 60)
-      camera.position.set(2.9, 1.35, 3.5)
-      camera.lookAt(0, 0.62, 0)
+      const view = bikeModel.camera
+      camera = new t.PerspectiveCamera(view.fov, width / height, 0.1, 60)
+      camera.position.set(view.position[0], view.position[1], view.position[2])
+      camera.lookAt(view.target[0], view.target[1], view.target[2])
 
       // Lighting: soft fill, one key with shadow, two coloured rims.
       scene.add(new t.HemisphereLight(0x5d6b7f, 0x05060a, 0.5))
@@ -582,8 +486,8 @@ export function useSuperbikeScene(): SceneHandle {
     tilt += (tiltTarget - tilt) * 0.06
     bike.rotation.y = spin
     bike.position.y = Math.sin(spin * 1.6) * 0.004
-    camera.position.y = 1.35 + tilt
-    camera.lookAt(0, 0.62, 0)
+    camera.position.y = bikeModel.camera.position[1] + tilt
+    camera.lookAt(bikeModel.camera.target[0], bikeModel.camera.target[1], bikeModel.camera.target[2])
 
     if (streaks && !reducedMotion) {
       streaks.rotation.y -= 0.0016
