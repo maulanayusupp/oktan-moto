@@ -7,20 +7,17 @@
 // live via the scene handle.
 import { brandConfig } from '~/config/brand.config'
 import { liveries } from '~/config/content.config'
-import { generalEnquiryLink } from '~/services/whatsapp.service'
 import { countByCondition } from '~/services/inventory.service'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
-const config = useRuntimeConfig()
+const { general } = useEnquiry()
 const { ready, failed, mount, setLivery } = useSuperbikeScene()
 
 const canvas = ref<HTMLCanvasElement | null>(null)
 const activeLivery = ref(liveries[0]?.id ?? 'ignition')
 
 const current = computed(() => liveries.find((entry) => entry.id === activeLivery.value) ?? liveries[0]!)
-
-const waHref = computed(() => generalEnquiryLink(String(config.public.whatsapp), t('wa.enquiry.general')))
 
 const stats = computed(() => [
   { value: String(brandConfig.stats.unitsListed), label: t('home.hero.statUnits'), icon: 'compare' },
@@ -55,7 +52,7 @@ function pick(id: string) {
           <BaseButton variant="primary" size="lg" icon="arrowRight" :to="localePath('inventory')">
             {{ $t('cta.browseInventory') }}
           </BaseButton>
-          <BaseButton variant="ghost" size="lg" icon="whatsapp" icon-leading :href="waHref" external>
+          <BaseButton variant="ghost" size="lg" icon="mail" icon-leading :href="general">
             {{ $t('cta.talkToUs') }}
           </BaseButton>
         </div>

@@ -1,15 +1,14 @@
 <script setup lang="ts">
 // Docked compare tray (max 3 units). Collapsed it shows thumbnails; expanded it
 // shows a spec table with the best value in each row highlighted, and a single
-// WhatsApp action that asks about all selected units at once.
-import { compareEnquiryLink } from '~/services/whatsapp.service'
+// e-mail action that asks about every selected unit at once.
 import { smallImage } from '~/utils/format'
 
-const { t, locale } = useI18n()
-const config = useRuntimeConfig()
+const { t } = useI18n()
 const localePath = useLocalePath()
 const { bikes, remove, clear } = useCompare()
 const { price, km } = useCurrency()
+const { forCompare } = useEnquiry()
 
 const expanded = ref(false)
 
@@ -32,9 +31,7 @@ function isBest(row: { best: 'min' | 'max'; values: number[] }, value: number) {
   return value === target
 }
 
-const waHref = computed(() =>
-  compareEnquiryLink(String(config.public.whatsapp), bikes.value, t('wa.enquiry.compare'), locale.value),
-)
+const mailHref = computed(() => forCompare(bikes.value))
 
 // Collapse automatically once the tray empties.
 watch(bikes, (value) => {
@@ -75,7 +72,7 @@ watch(bikes, (value) => {
 
         <div class="tray__actions">
           <BaseButton variant="ghost" size="sm" @click="clear">{{ $t('compare.clear') }}</BaseButton>
-          <BaseButton variant="primary" size="sm" icon="whatsapp" icon-leading :href="waHref" external>
+          <BaseButton variant="primary" size="sm" icon="mail" icon-leading :href="mailHref">
             {{ $t('compare.ask') }}
           </BaseButton>
         </div>

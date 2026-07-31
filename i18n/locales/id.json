@@ -1,7 +1,7 @@
 {
   "meta": {
     "tagline": "Galeri Motor Sport Baru & Bekas",
-    "description": "OKTAN adalah galeri motor sport baru dan bekas pilihan di Jakarta Selatan. Unit diperiksa, riwayat dicatat, harga terbuka, dan konsultasi langsung lewat WhatsApp."
+    "description": "OKTAN adalah galeri motor sport baru dan bekas pilihan di Jakarta Selatan. Unit diperiksa, riwayat dicatat, harga terbuka, dan konsultasi langsung lewat email."
   },
   "common": {
     "demoShort": "Situs demo: nama showroom, unit, harga, dan riwayat pada halaman ini adalah data contoh.",
@@ -29,8 +29,8 @@
     "credits": "Kredit Foto"
   },
   "cta": {
-    "whatsapp": "WhatsApp",
-    "whatsappLong": "Konsultasi via WhatsApp",
+    "email": "Email",
+    "emailLong": "Konsultasi lewat email",
     "viewUnit": "Lihat unit",
     "browseInventory": "Lihat koleksi",
     "talkToUs": "Tanya dulu",
@@ -42,7 +42,7 @@
     "band": {
       "eyebrow": "Langkah berikutnya",
       "title": "Ada unit yang menarik? Tanyakan sebelum orang lain",
-      "lead": "Kirim satu pesan, kami balas dengan kondisi terkini, hasil pemeriksaan, dan rincian biaya. Tanpa kewajiban membeli."
+      "lead": "Kirim satu email, kami balas dengan kondisi terkini, hasil pemeriksaan, dan rincian biaya. Tanpa kewajiban membeli."
     }
   },
   "condition": {
@@ -182,7 +182,7 @@
     "hero": {
       "eyebrow": "Koleksi",
       "title": "Dua belas mesin, satu standar pemeriksaan",
-      "lead": "Bandingkan spesifikasi, kilometer, dan harga secara berdampingan. Tandai maksimal tiga unit untuk dibandingkan, lalu lanjutkan lewat WhatsApp."
+      "lead": "Bandingkan spesifikasi, kilometer, dan harga secara berdampingan. Tandai maksimal tiga unit untuk dibandingkan, lalu lanjutkan lewat email."
     }
   },
   "compare": {
@@ -225,11 +225,9 @@
     "equipment": "Kelengkapan",
     "about": "Tentang unit ini",
     "location": "Unit ada di showroom Jakarta Selatan",
-    "responseTime": "Dibalas pada jam operasional",
+    "responseTime": "Email dibalas pada jam operasional",
     "paperwork": "Dokumen dibantu sampai tuntas",
-    "enquiryNote": "Menekan tombol di atas membuka WhatsApp dengan pesan yang sudah terisi. Anda tetap bisa mengubahnya sebelum mengirim.",
-    "mailSubject": "Tanya unit: {unit}",
-    "mailBody": "Halo OKTAN,\n\nSaya tertarik dengan {unit} yang dijual {price}.\nHalaman unit: {url}\n\nBoleh dibantu informasi kondisi terkini dan jadwal pemeriksaan?\n\nTerima kasih.",
+    "enquiryNote": "Menekan tombol di atas membuka aplikasi email Anda dengan pesan yang sudah terisi. Anda tetap bisa mengubahnya sebelum mengirim.",
     "related": {
       "eyebrow": "Alternatif",
       "title": "Unit lain yang sekelas"
@@ -252,7 +250,7 @@
   "home": {
     "meta": {
       "title": "Motor sport baru & bekas, diperiksa dan terbuka",
-      "description": "OKTAN — galeri motor sport baru dan bekas di Jakarta Selatan. Dua belas unit contoh, telemetri lengkap, simulasi cicilan, dan konsultasi via WhatsApp."
+      "description": "OKTAN — galeri motor sport baru dan bekas di Jakarta Selatan. Dua belas unit contoh, telemetri lengkap, simulasi cicilan, dan konsultasi lewat email."
     },
     "hero": {
       "eyebrow": "Galeri motor sport · Jakarta Selatan",
@@ -327,8 +325,8 @@
         "body": "Datang ke showroom atau minta video call. Kami tunjukkan unitnya, hasil pemeriksaan, dan dokumennya."
       },
       "agree": {
-        "title": "Sepakat lewat WhatsApp",
-        "body": "Negosiasi, opsi pembayaran, dan rincian biaya ditulis di chat supaya kedua pihak punya catatan yang sama."
+        "title": "Sepakat lewat email",
+        "body": "Negosiasi, opsi pembayaran, dan rincian biaya ditulis dalam email supaya kedua pihak punya catatan yang sama."
       },
       "handover": {
         "title": "Serah terima",
@@ -384,7 +382,7 @@
   "faq": {
     "eyebrow": "Pertanyaan umum",
     "title": "Yang paling sering ditanyakan",
-    "lead": "Belum terjawab? Kirim pesan WhatsApp, kami jawab pada jam operasional.",
+    "lead": "Belum terjawab? Kirim email, kami jawab pada jam operasional.",
     "items": {
       "inspection": {
         "q": "Apa saja yang diperiksa pada unit bekas?",
@@ -396,7 +394,7 @@
       },
       "testRide": {
         "q": "Bisa test ride?",
-        "a": "Untuk unit bekas, kami sediakan pemanasan mesin dan pemeriksaan bersama di area showroom. Test ride di jalan umum bergantung pada unit, kelengkapan dokumen, dan SIM Anda, jadi silakan dibicarakan lebih dulu lewat WhatsApp."
+        "a": "Untuk unit bekas, kami sediakan pemanasan mesin dan pemeriksaan bersama di area showroom. Test ride di jalan umum bergantung pada unit, kelengkapan dokumen, dan SIM Anda, jadi silakan dibicarakan lebih dulu lewat email."
       },
       "financing": {
         "q": "Apakah bisa dicicil?",
@@ -408,7 +406,7 @@
       },
       "tradeIn": {
         "q": "Apakah menerima tukar tambah?",
-        "a": "Kami menerima penawaran tukar tambah untuk motor sport. Kirim foto, kilometer, tahun, dan dokumen unit Anda lewat WhatsApp; penilaian akhir dilakukan setelah pemeriksaan fisik."
+        "a": "Kami menerima penawaran tukar tambah untuk motor sport. Kirim foto, kilometer, tahun, dan dokumen unit Anda lewat email; penilaian akhir dilakukan setelah pemeriksaan fisik."
       },
       "warranty": {
         "q": "Ada garansi?",
@@ -416,7 +414,7 @@
       },
       "foreignBuyer": {
         "q": "Saya di luar Jakarta atau di luar negeri, bagaimana caranya?",
-        "a": "Kami bisa mengirim video call keliling unit beserta foto detail dan hasil pemeriksaan. Pembayaran dan pengiriman diatur bertahap, dan seluruh kesepakatan tetap tercatat di chat."
+        "a": "Kami bisa mengirim video keliling unit beserta foto detail dan hasil pemeriksaan lewat email. Pembayaran dan pengiriman diatur bertahap, dan seluruh kesepakatan tetap tercatat tertulis."
       }
     }
   },
@@ -478,7 +476,7 @@
         },
         "digital": {
           "title": "Katalog digital",
-          "body": "Katalog daring dua bahasa dengan telemetri unit, perbandingan, dan konsultasi lewat WhatsApp."
+          "body": "Katalog daring dua bahasa dengan telemetri unit, perbandingan, dan konsultasi lewat email."
         }
       }
     },
@@ -504,7 +502,7 @@
   "contact": {
     "meta": {
       "title": "Kontak & kunjungan",
-      "description": "Hubungi OKTAN lewat WhatsApp atau email, atau atur jadwal kunjungan ke showroom contoh di Jakarta Selatan."
+      "description": "Hubungi OKTAN lewat email, atau atur jadwal kunjungan ke showroom contoh di Jakarta Selatan."
     },
     "hero": {
       "eyebrow": "Kontak",
@@ -521,29 +519,25 @@
       "sunday": "Minggu tutup"
     },
     "channels": {
-      "whatsappValue": "Jalur tercepat",
-      "whatsappMeta": "Pesan sudah terisi otomatis, tinggal Anda kirim",
       "email": "Email",
-      "emailMeta": "Cocok untuk pertanyaan panjang dan lampiran dokumen",
+      "emailMeta": "Jalur resmi kami. Pesan sudah terisi otomatis, tinggal Anda kirim.",
+      "hours": "Jam operasional",
       "showroom": "Showroom",
       "openMaps": "Buka di Maps",
-      "hours": "Jam operasional"
-    },
-    "mail": {
-      "subject": "Pertanyaan dari situs OKTAN",
-      "body": "Halo OKTAN,\n\nSaya ingin bertanya mengenai unit yang tayang di situs Anda.\n\nTerima kasih."
+      "response": "Waktu balasan",
+      "responseValue": "Pada jam operasional",
+      "responseMeta": "Email yang masuk di luar jam kerja kami balas pada hari kerja berikutnya."
     },
     "form": {
       "eyebrow": "Formulir",
       "title": "Susun pesan Anda",
-      "lead": "Isi kolom di bawah, lalu tekan tombol untuk membuka WhatsApp dengan pesan yang sudah tersusun.",
+      "lead": "Isi kolom di bawah, lalu tekan tombol untuk membuka aplikasi email Anda dengan pesan yang sudah tersusun.",
       "name": "Nama",
       "namePlaceholder": "Nama lengkap Anda",
-      "phone": "Nomor WhatsApp",
-      "phonePlaceholder": "08xxxxxxxxxx",
+      "phone": "Nomor telepon",
+      "phonePlaceholder": "Opsional, mis. 021 1234 5678",
       "email": "Email",
       "emailPlaceholder": "nama.anda{'@'}contoh.com",
-      "emailHint": "Opsional, diisi kalau Anda ingin dibalas lewat email.",
       "interest": "Keperluan",
       "interestPlaceholder": "Pilih keperluan",
       "interests": {
@@ -555,14 +549,15 @@
       },
       "message": "Pesan",
       "messagePlaceholder": "Sebutkan unit yang Anda minati, rencana waktu kunjungan, atau pertanyaan spesifik Anda.",
-      "submit": "Buka WhatsApp",
-      "emailInstead": "Kirim lewat email",
-      "privacyNote": "Formulir ini tidak mengirim data ke server kami. Isian Anda hanya dipakai untuk menyusun pesan di aplikasi WhatsApp atau email di perangkat Anda sendiri."
+      "submit": "Buka aplikasi email",
+      "privacyNote": "Formulir ini tidak mengirim data ke server kami. Isian Anda hanya dipakai untuk menyusun draf pesan di aplikasi email pada perangkat Anda sendiri.",
+      "phoneHint": "Opsional, diisi kalau Anda lebih suka kami hubungi lewat telepon.",
+      "orWriteTo": "Atau tulis langsung ke"
     },
     "errors": {
       "name": "Mohon tulis nama Anda minimal 2 karakter.",
-      "phone": "Nomor WhatsApp tampak belum lengkap.",
-      "email": "Format email belum sesuai.",
+      "phone": "Nomor telepon tampak belum lengkap.",
+      "email": "Mohon isi alamat email yang valid.",
       "message": "Ceritakan sedikit lebih rinci, minimal 10 karakter."
     },
     "checklist": {
@@ -573,7 +568,7 @@
         "unit": "Daftar unit yang ingin dilihat, agar kami siapkan lebih dulu",
         "tradeIn": "Dokumen motor Anda bila berencana tukar tambah"
       },
-      "note": "Kunjungan tanpa pemberitahuan tetap kami terima, hanya saja unit tertentu mungkin sedang dalam pemeriksaan."
+      "note": "Kunjungan tanpa pemberitahuan tetap kami terima, hanya saja unit tertentu mungkin sedang dalam pemeriksaan. Kabari lewat email supaya unitnya siap."
     }
   },
   "compliance": {
@@ -618,6 +613,14 @@
         "body": [
           "Kalkulator pada halaman unit memakai metode bunga flat dengan asumsi suku bunga tetap yang kami cantumkan di layar. Hasilnya adalah perkiraan kasar untuk membantu gambaran awal.",
           "Perhitungan tersebut bukan penawaran kredit, bukan persetujuan pembiayaan, dan tidak memperhitungkan biaya administrasi, asuransi, provisi, denda keterlambatan, atau penilaian risiko. Skema sebenarnya ditentukan oleh perusahaan pembiayaan berizin setelah pengajuan resmi."
+        ]
+      },
+      {
+        "heading": "Kanal kontak dan komunikasi",
+        "body": [
+          "Email adalah satu-satunya kanal kontak pada situs ini. Kami tidak menampilkan nomor telepon atau nomor WhatsApp, sehingga tidak ada nomor pribadi yang terekspos di halaman publik maupun di dalam kode sumbernya.",
+          "Semua tombol tanya-unit, perbandingan, dan formulir kontak bekerja dengan cara yang sama: menyusun draf email berisi data unit dan tautan halamannya, lalu membukanya di aplikasi email Anda. Tidak ada data yang dikirim ke server kami, dan tidak ada pesan yang terkirim sebelum Anda menekan kirim sendiri.",
+          "Untuk penerapan nyata, nomor telepon usaha dan jam layanan telepon sebaiknya dicantumkan bersama alamat email agar pembeli punya lebih dari satu cara menghubungi."
         ]
       },
       {
@@ -695,15 +698,15 @@
       {
         "heading": "Formulir kontak",
         "body": [
-          "Formulir pada halaman Kontak tidak mengirimkan data ke server kami, karena situs ini tidak memiliki endpoint penerima. Isian Anda dipakai untuk menyusun teks pesan, lalu dibuka di aplikasi WhatsApp atau klien email di perangkat Anda.",
-          "Artinya, tidak ada data yang berpindah sampai Anda sendiri menekan kirim di aplikasi tersebut. Setelah pesan terkirim, isi percakapan mengikuti kebijakan privasi penyedia layanan tersebut."
+          "Formulir pada halaman Kontak tidak mengirimkan data ke server kami, karena situs ini tidak memiliki endpoint penerima. Isian Anda dipakai untuk menyusun teks pesan, lalu dibuka sebagai draf di aplikasi email pada perangkat Anda.",
+          "Artinya, tidak ada data yang berpindah sampai Anda sendiri menekan kirim di aplikasi tersebut. Setelah email terkirim, isinya tersimpan di kotak masuk kami dan mengikuti kebijakan penyedia email masing-masing."
         ]
       },
       {
         "heading": "Layanan pihak ketiga",
         "body": [
           "Berkas font dimuat dari Google Fonts, sehingga alamat IP Anda terlihat oleh layanan tersebut saat font diunduh. Seluruh foto, skrip, dan gaya lainnya dilayankan dari domain situs ini sendiri.",
-          "Tautan WhatsApp mengarah ke wa.me milik WhatsApp, dan tautan peta mengarah ke Google Maps. Membuka tautan itu berarti Anda masuk ke layanan pihak ketiga dengan kebijakan privasinya sendiri. Kami sengaja tidak menyematkan peta atau video dalam halaman agar tidak ada cookie pihak ketiga yang terpasang tanpa Anda ketahui."
+          "Tautan peta mengarah ke Google Maps, dan tautan email membuka aplikasi email di perangkat Anda. Kami sengaja tidak menyematkan peta, video, atau widget obrolan di dalam halaman agar tidak ada cookie pihak ketiga yang terpasang tanpa Anda ketahui."
         ]
       },
       {
@@ -716,8 +719,8 @@
       {
         "heading": "Hak Anda dan kontak",
         "body": [
-          "Karena kami tidak menyimpan data pribadi Anda di sisi server, tidak ada arsip yang perlu diminta atau dihapus. Bila Anda pernah mengirim pesan WhatsApp atau email kepada kami, Anda dapat meminta percakapan itu dihapus dari sisi kami.",
-          "Pertanyaan mengenai privasi dapat dikirim melalui kanal kontak yang tercantum pada halaman Kontak."
+          "Karena kami tidak menyimpan data pribadi Anda di sisi server, tidak ada arsip yang perlu diminta atau dihapus. Bila Anda pernah mengirim email kepada kami, Anda dapat meminta pesan itu dihapus dari kotak masuk kami.",
+          "Pertanyaan mengenai privasi dapat dikirim ke alamat email yang tercantum pada halaman Kontak."
         ]
       }
     ]
@@ -817,7 +820,7 @@
     },
     "generic": {
       "title": "Ada yang tidak berjalan semestinya",
-      "body": "Terjadi galat di sisi kami. Coba muat ulang halaman, atau hubungi kami lewat WhatsApp bila masih terjadi."
+      "body": "Terjadi galat di sisi kami. Coba muat ulang halaman, atau hubungi kami lewat email bila masih terjadi."
     },
     "backHome": "Kembali ke beranda"
   },
@@ -828,14 +831,6 @@
     "reach": "Hubungi",
     "rights": "Seluruh hak dilindungi.",
     "built": "Dibangun dengan Nuxt · Bahasa Indonesia & English"
-  },
-  "wa": {
-    "enquiry": {
-      "general": "Halo OKTAN, saya melihat situs Anda dan ingin bertanya mengenai unit yang tayang.",
-      "bike": "Halo OKTAN, saya tertarik dengan %unit% (%year%) yang tercantum %price%, kilometer %mileage%.\n\nHalaman unit: %url%\n\nBoleh dibantu informasi kondisi terkini, hasil pemeriksaan, dan jadwal untuk melihat unitnya?",
-      "compare": "Halo OKTAN, saya sedang membandingkan beberapa unit berikut:\n\n%list%\n\nBoleh dibantu masukan mengenai kondisi dan biaya masing-masing?",
-      "contact": "Halo OKTAN,\n\nNama: %name%\nWhatsApp: %phoneNumber%\nEmail: %email%\nKeperluan: %interest%\n\n%message%"
-    }
   },
   "bikes": {
     "ducati-panigale-v4r": {
@@ -885,6 +880,24 @@
     "ducati-multistrada-v4s": {
       "tagline": "Sport touring V4 dengan suspensi semi-aktif dan cruise control adaptif.",
       "description": "Multistrada V4 S dirancang untuk jarak jauh tanpa melepaskan karakter sport: mesin V4 bertenaga besar, suspensi semi-aktif, dan bantuan elektronik termasuk cruise control adaptif berbasis radar. Unit baru ini datang dengan garansi resmi pemegang merek. Bobotnya paling tinggi di katalog ini, jadi cocok untuk perjalanan berbeban, bukan untuk motor lincah di dalam kota."
+    }
+  },
+  "mail": {
+    "general": {
+      "subject": "Pertanyaan dari situs OKTAN",
+      "body": "Halo OKTAN,\n\nSaya melihat situs Anda dan ingin bertanya mengenai unit yang tayang.\n\nTerima kasih."
+    },
+    "bike": {
+      "subject": "Tanya unit: %unit% (%year%)",
+      "body": "Halo OKTAN,\n\nSaya tertarik dengan %unit% (%year%) yang tercantum %price%, kilometer %mileage%.\n\nHalaman unit: %url%\n\nBoleh dibantu informasi kondisi terkini, hasil pemeriksaan, dan jadwal untuk melihat unitnya?\n\nTerima kasih."
+    },
+    "compare": {
+      "subject": "Perbandingan beberapa unit",
+      "body": "Halo OKTAN,\n\nSaya sedang membandingkan beberapa unit berikut:\n\n%list%\n\nBoleh dibantu masukan mengenai kondisi dan biaya masing-masing?\n\nTerima kasih."
+    },
+    "contact": {
+      "subject": "Pesan dari formulir kontak: %name%",
+      "body": "Halo OKTAN,\n\nNama: %name%\nEmail: %email%\nTelepon: %phone%\nKeperluan: %interest%\n\n%message%"
     }
   }
 }

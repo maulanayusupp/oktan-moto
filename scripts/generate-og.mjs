@@ -131,7 +131,7 @@ async function main() {
     eyebrow: 'GALERI MOTOR SPORT · JAKARTA',
     titleLines: ['MOTOR SPORT BARU', '& BEKAS PILIHAN'],
     meta: 'Diperiksa · riwayat dicatat · harga terbuka',
-    price: 'Konsultasi via WhatsApp',
+    price: 'Konsultasi lewat email',
     badge: 'DEMO',
   })
   await writeFile(resolve(PUBLIC, 'og-image.jpg'), await home.jpeg({ quality: 84, mozjpeg: true }).toBuffer())

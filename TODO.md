@@ -10,9 +10,13 @@ update `CLAUDE.md`, both locales and the compliance pages (see
 ## Before this could go live commercially
 
 - [ ] **Replace the placeholder identity.** Real business name, legal entity,
-      licence/registration numbers, address, hours, phone. Then remove the demo
-      banner from `/compliance` and the `DemoNotice` instances that describe the
-      data as illustrative.
+      licence/registration numbers, address, hours. Then remove the demo banner
+      from `/compliance` and the `DemoNotice` instances that describe the data as
+      illustrative.
+- [ ] **Decide on a phone channel.** The site is intentionally e-mail-only right
+      now. A real showroom usually wants a published business number and service
+      hours; adding one means updating the contact page, the AutoDealer JSON-LD
+      (`telephone`) and the contact-channel section of `/compliance`.
 - [ ] **Replace all photography with own unit photos.** Current frames are
       freely licensed Wikimedia Commons images of comparable models; CC BY-SA
       carries share-alike obligations. Own photos also remove the "crop of the
@@ -31,7 +35,7 @@ update `CLAUDE.md`, both locales and the compliance pages (see
 - [ ] Sold / reserved states, with a `sold` badge and an "archive" view instead of
       silently removing units.
 - [ ] Trade-in intake flow: guided form (photos, mileage, documents) that
-      composes a structured WhatsApp message.
+      composes a structured e-mail.
 - [ ] Saved/wishlist units alongside the compare tray, sharing the storage layer.
 - [ ] Per-unit inspection report as a rendered PDF/print view.
 - [ ] Finance: side-by-side comparison of several tenor/DP combinations.
@@ -39,11 +43,12 @@ update `CLAUDE.md`, both locales and the compliance pages (see
 
 ## Engineering
 
-- [ ] **Automated tests.** Unit tests for `inventory`, `whatsapp`, `finance`,
+- [ ] **Automated tests.** Unit tests for `inventory`, `enquiry`, `finance`,
       `contact` services (Vitest) and a smoke E2E (Playwright) covering
-      filter → detail → WhatsApp link composition.
+      filter → detail → mailto: composition.
 - [ ] **ESLint + Prettier** with `@nuxt/eslint`, wired into a pre-commit hook.
-- [ ] CI: run `pnpm build`, `pnpm typecheck`, `pnpm i18n:check` on every push.
+- [ ] CI: run `pnpm build`, `pnpm typecheck`, `pnpm i18n:check` on every push, and
+      `pnpm social:check` against a preview deployment.
 - [ ] Image delivery: adopt `@nuxt/image` for responsive AVIF/WebP with automatic
       `srcset`, replacing the hand-rolled `-sm` variants.
 - [ ] Enable runtime OG images (`@nuxtjs/og-image` needs the native
@@ -89,4 +94,4 @@ update `CLAUDE.md`, both locales and the compliance pages (see
 - [ ] Dispute-resolution clause and jurisdiction detail in `/terms`.
 - [ ] Independent accessibility audit (axe + manual screen-reader pass) and a
       published statement with the audit date.
-- [ ] Document the retention policy for WhatsApp conversations.
+- [ ] Document the retention policy for e-mail enquiries.

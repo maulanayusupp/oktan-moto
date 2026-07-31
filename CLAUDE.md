@@ -15,10 +15,11 @@ pre-owned sportbikes** (motor sport), aimed at the Indonesian market.
   units, their prices, mileage, ownership and service histories are
   **illustrative sample data**. This is stated on `/compliance`, in the footer of
   every page, and next to every set of figures via the `DemoNotice` component.
-- **Commerce model: WhatsApp handoff, not a cart.** A litre-class motorcycle is
-  not a one-click purchase, so every commerce action ends in a pre-filled,
-  localised `wa.me` message. There is no checkout, no payment integration and no
-  server-side form endpoint.
+- **Commerce model: e-mail handoff, not a cart.** A litre-class motorcycle is not
+  a one-click purchase, so every commerce action opens a pre-filled, localised
+  `mailto:` draft. **E-mail is the only channel — no telephone or WhatsApp number
+  appears anywhere on the site or in the source.** There is no checkout, no
+  payment integration and no server-side form endpoint.
 - **Copy must not over-claim.** Only claims a showroom actually controls
   (inspection, records, paperwork, delivery). No performance promises, no
   manufactured urgency, no fabricated reviews — sample testimonials are labelled
@@ -51,18 +52,19 @@ config  →  services  →  composables  →  components  →  pages
 - **`app/config/*`** — structure and hard facts only: ids, prices, specs, image
   paths, section order, 3D geometry. **No display strings.**
 - **`app/services/*`** — pure business logic, no Vue: `inventory` (filter/sort/
-  related/ranges), `whatsapp` (deep links), `contact` (validation),
+  related/ranges), `enquiry` (`mailto:` composition), `contact` (validation),
   `finance` (instalment maths).
 - **`app/composables/*`** — reactive state and side effects: `usePageSeo`,
-  `useInventoryFilters` (URL-synced), `useCompare` (shared tray),
-  `useCurrency`, `useReveal`, `useSuperbikeScene` (WebGL).
+  `useInventoryFilters` (URL-synced), `useCompare` (shared tray), `useEnquiry`
+  (localised `mailto:` links), `useCurrency`, `useReveal`, `useSuperbikeScene`
+  (WebGL).
 - **`app/components/*`** — grouped `base/ layout/ common/ home/ catalog/ bike/
   contact/`, registered with `pathPrefix: false`, so `<BaseButton />`,
   `<BikeCard />` etc. resolve by filename.
 - **`app/utils/*`** — pure helpers (`format.ts`, `iconPaths.ts`), auto-imported.
   ⚠️ Auto-imports are global: a local `const ratio = …` would shadow
   `utils/format.ts`'s `ratio()` and fail at build time. Name locals distinctly.
-- **`i18n/locales/{id,en}.json`** — **every** visible string. 534 leaf keys.
+- **`i18n/locales/{id,en}.json`** — **every** visible string. 539 leaf keys.
 - **`server/api/__sitemap__/urls.ts`** — dynamic sitemap entries for unit pages.
 
 ## 4. Styling rules
@@ -99,12 +101,17 @@ corner, the apex-line SVG curve, telemetry bars, technical grid texture.
   tyre Ø 0.62 m, seat 0.83 m) and can be verified without a browser:
   `pnpm bike:profile` renders the side view to `docs/bike-profile.png`.
 - **Compare tray** — up to 3 units, persisted in `localStorage`, best value per
-  row highlighted, single WhatsApp message covering all selections.
+  row highlighted, single e-mail covering all selections.
 - **Telemetry bars** — each unit's power, power-to-weight, capacity and weight
   benchmarked against the live catalogue range (weight bar inverts, since lower
   is better).
 - **Instalment estimator** — flat-rate simulation (the Indonesian multifinance
   convention), labelled as an illustration in the UI and on `/compliance`.
+- **Social preview gate** — `pnpm social:check` asserts, against a running
+  server, everything WhatsApp/Instagram/Facebook/X need: absolute raster
+  `og:image` of the declared size, one `og:image` tag per page, correct
+  content-type, an image small enough for WhatsApp to fetch, and a `robots.txt`
+  that does not block scrapers.
 - **URL-synced filters** — condition, category, price ceiling, capacity, sort and
   free-text all live in the query string, so any view is shareable.
 - **Photo credits page** — generated from `app/config/photo-credits.json`, which
@@ -138,6 +145,7 @@ pnpm build            # authoritative compile gate
 pnpm preview          # serve .output
 pnpm typecheck        # vue-tsc, must stay clean
 pnpm i18n:check       # ID/EN parity, placeholders, unit copy, unescaped "@"
+pnpm social:check     # WA/IG/FB/X link previews (needs a running server)
 pnpm bikes            # (re)download + grade photography, write photo-credits.json
 pnpm og               # render share cards (run after pnpm bikes)
 pnpm favicons         # icons + site.webmanifest
@@ -146,10 +154,10 @@ pnpm bike:profile     # render the 3D model's side view for review
 
 ## 8. Gotchas
 
-- **WhatsApp templates use `%token%`**, not vue-i18n `{}` — the message compiler
-  would consume `{}` before the service could fill it. Tokens: `%unit% %year%
-  %price% %mileage% %url% %list% %name% %phoneNumber% %email% %interest%
-  %message%`.
+- **E-mail templates use `%token%`**, not vue-i18n `{}` — the message compiler
+  would consume `{}` before the service could fill it. Templates live under
+  `mail.{general,bike,compare,contact}.{subject,body}`; tokens: `%unit% %year%
+  %price% %mileage% %url% %list% %name% %phone% %email% %interest% %message%`.
 - **A literal `@` in an i18n string must be escaped `{'@'}`** — vue-i18n reads it
   as a linked-message marker. `pnpm i18n:check` fails the build on this.
 - **`og:type: product`** is set through `useHead` meta, not `useSeoMeta`, whose
@@ -157,6 +165,11 @@ pnpm bike:profile     # render the 3D model's side view for review
 - `nuxt-og-image` runtime rendering is **off** (needs the native `@takumi-rs/core`
   renderer); share images are pre-rendered instead.
 - `sharp` is pinned to 0.34.x to satisfy `nuxt-og-image`'s peer range.
+- **`site.indexable: true` is set explicitly.** Otherwise nuxt-robots infers
+  indexability from the build environment and can emit `Disallow: /` — and since
+  Instagram/Facebook's scraper honours robots.txt, that silently kills link
+  previews while every meta tag still looks correct. Use
+  `NUXT_SITE_INDEXABLE=false` on staging.
 - Wikimedia rate-limits bursts (HTTP 429). `pnpm bikes` paces requests, honours
   `Retry-After`, and skips frames already on disk (`--force` to redo).
 - Cards use a stretched `::after`-style link overlay so the compare button can
@@ -179,10 +192,12 @@ On **every** change, in the same commit:
 2. Update **both** `i18n/locales/id.json` and `en.json` for any text change, then
    run `pnpm i18n:check`.
 3. Update `/compliance` (and `/privacy` or `/terms` where relevant) if data
-   sources, third-party assets, claims or tracking behaviour changed — plus
-   `/credits` if photography changed.
+   sources, third-party assets, claims, contact channels or tracking behaviour
+   changed — plus `/credits` if photography changed.
 4. Record follow-up work in `TODO.md`.
-5. Run `pnpm build` **and** `pnpm typecheck` before committing.
+5. Run `pnpm build`, `pnpm typecheck` and `pnpm i18n:check` before committing;
+   run `pnpm social:check` against `pnpm preview` when touching SEO, images or
+   robots behaviour.
 6. Commit as **Maulana Yusup Abdullah `<maulanayusupp@gmail.com>`**, with no
    AI-agent trailer, then push.
 
@@ -194,7 +209,7 @@ On **every** change, in the same commit:
 | `/inventory` | Filterable catalogue + ItemList JSON-LD |
 | `/inventory/[slug]` | Gallery, prose, telemetry/specs, instalment estimate, enquiry rail, related units, Product JSON-LD |
 | `/about` | Story, principles, timeline, preparation editorial, visiting |
-| `/contact` | Channels, WhatsApp-composing form, viewing checklist |
+| `/contact` | Channels, e-mail-composing form, viewing checklist |
 | `/compliance` | Demo status, data + photo provenance, consumer law, accessibility |
 | `/privacy` | Cookie/localStorage disclosure, no-server form explanation |
 | `/terms` | Listing status, pricing, liability, governing law |

@@ -1,42 +1,18 @@
 <script setup lang="ts">
-// Sticky purchase rail: price, availability, WhatsApp handoff (the checkout),
-// e-mail fallback and the compare toggle. Everything a buyer needs stays in view
-// while they scroll the specs.
-import { bikeEnquiryLink, mailtoLink } from '~/services/whatsapp.service'
-import { formatIdrExact } from '~/utils/format'
+// Sticky purchase rail: price, availability, the e-mail enquiry (this site's
+// checkout) and the compare toggle. Everything a buyer needs stays in view while
+// they scroll the specs.
 import type { BikeView } from '~/types'
 
 const props = defineProps<{ bike: BikeView }>()
 
-const { t, locale } = useI18n()
 const config = useRuntimeConfig()
 const route = useRoute()
 const { has, toggle, isFull } = useCompare()
+const { email, forBike } = useEnquiry()
 
 const unitUrl = computed(() => `${String(config.public.siteUrl).replace(/\/$/, '')}${route.path}`)
-
-const waHref = computed(() =>
-  bikeEnquiryLink({
-    phone: String(config.public.whatsapp),
-    bike: props.bike,
-    url: unitUrl.value,
-    locale: locale.value,
-    template: t('wa.enquiry.bike'),
-  }),
-)
-
-const mailHref = computed(() =>
-  mailtoLink(
-    String(config.public.contactEmail),
-    t('unit.mailSubject', { unit: `${props.bike.make} ${props.bike.model}` }),
-    t('unit.mailBody', {
-      unit: `${props.bike.make} ${props.bike.model} (${props.bike.year})`,
-      price: formatIdrExact(props.bike.priceIdr, locale.value),
-      url: unitUrl.value,
-    }),
-  ),
-)
-
+const mailHref = computed(() => forBike(props.bike, unitUrl.value))
 const inCompare = computed(() => has(props.bike.slug))
 </script>
 
@@ -65,12 +41,10 @@ const inCompare = computed(() => has(props.bike.slug))
       </ul>
 
       <div class="enquiry__actions">
-        <BaseButton variant="primary" size="lg" icon="whatsapp" icon-leading block :href="waHref" external>
+        <BaseButton variant="primary" size="lg" icon="mail" icon-leading block :href="mailHref">
           {{ $t('cta.askAboutUnit') }}
         </BaseButton>
-        <BaseButton variant="ghost" size="md" icon="mail" icon-leading block :href="mailHref">
-          {{ $t('cta.emailUs') }}
-        </BaseButton>
+        <p class="enquiry__address">{{ email }}</p>
         <BaseButton
           :variant="inCompare ? 'volt' : 'ghost'"
           size="md"
@@ -129,5 +103,14 @@ const inCompare = computed(() => has(props.bike.slug))
   display: flex;
   flex-direction: column;
   gap: $space-2;
+}
+
+.enquiry__address {
+  font-family: $font-display;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: $titanium;
+  text-align: center;
+  overflow-wrap: anywhere;
 }
 </style>

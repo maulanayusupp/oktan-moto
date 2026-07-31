@@ -50,8 +50,13 @@ export default defineNuxtConfig({
     url: siteUrl,
     name: 'OKTAN Superbike Gallery',
     description:
-      'OKTAN — galeri motor sport baru & bekas pilihan. Setiap unit diperiksa, riwayatnya dicatat, harganya transparan. Konsultasi langsung via WhatsApp.',
+      'OKTAN — galeri motor sport baru & bekas pilihan. Setiap unit diperiksa, riwayatnya dicatat, harganya transparan. Konsultasi langsung lewat email.',
     defaultLocale: 'id',
+    // Set explicitly: nuxt-robots otherwise infers indexability from the build
+    // environment and can emit `Disallow: /`. Instagram/Facebook's scraper
+    // honours robots.txt, so that silently kills link previews. Override with
+    // NUXT_SITE_INDEXABLE=false on staging deployments.
+    indexable: true,
   },
 
   // Runtime OG-image rendering needs a native renderer (@takumi-rs/core) we do
@@ -85,7 +90,6 @@ export default defineNuxtConfig({
     public: {
       siteUrl,
       contactEmail: process.env.NUXT_PUBLIC_CONTACT_EMAIL || 'maulanayusupp@gmail.com',
-      whatsapp: process.env.NUXT_PUBLIC_WHATSAPP || '6287822766333',
     },
   },
 

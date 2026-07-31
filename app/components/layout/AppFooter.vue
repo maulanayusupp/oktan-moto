@@ -4,15 +4,9 @@
 // /compliance, so the sample nature of the data is never hidden.
 import { brandConfig } from '~/config/brand.config'
 import { legalNav, primaryNav } from '~/config/navigation.config'
-import { generalEnquiryLink, mailtoLink } from '~/services/whatsapp.service'
 
-const { t } = useI18n()
 const localePath = useLocalePath()
-const config = useRuntimeConfig()
-
-const email = computed(() => String(config.public.contactEmail))
-const waHref = computed(() => generalEnquiryLink(String(config.public.whatsapp), t('wa.enquiry.general')))
-const mailHref = computed(() => mailtoLink(email.value, t('contact.mail.subject'), t('contact.mail.body')))
+const { email, general } = useEnquiry()
 const year = new Date().getFullYear()
 </script>
 
@@ -44,10 +38,7 @@ const year = new Date().getFullYear()
 
       <div class="footer__col">
         <h2 class="footer__heading">{{ $t('footer.reach') }}</h2>
-        <a class="footer__link footer__link--icon" :href="waHref" target="_blank" rel="noopener noreferrer">
-          <BaseIcon name="whatsapp" :size="15" />WhatsApp
-        </a>
-        <a class="footer__link footer__link--icon" :href="mailHref">
+        <a class="footer__link footer__link--icon" :href="general">
           <BaseIcon name="mail" :size="15" />{{ email }}
         </a>
         <p class="footer__address">

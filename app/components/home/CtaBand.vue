@@ -1,12 +1,7 @@
 <script setup lang="ts">
 // Closing conversion band, reused on the home and about pages.
-import { generalEnquiryLink } from '~/services/whatsapp.service'
-
-const { t } = useI18n()
 const localePath = useLocalePath()
-const config = useRuntimeConfig()
-
-const waHref = computed(() => generalEnquiryLink(String(config.public.whatsapp), t('wa.enquiry.general')))
+const { general } = useEnquiry()
 </script>
 
 <template>
@@ -19,8 +14,8 @@ const waHref = computed(() => generalEnquiryLink(String(config.public.whatsapp),
       <h2 class="band__title">{{ $t('cta.band.title') }}</h2>
       <p class="band__lead">{{ $t('cta.band.lead') }}</p>
       <div class="band__actions">
-        <BaseButton variant="primary" size="lg" icon="whatsapp" icon-leading :href="waHref" external>
-          {{ $t('cta.whatsappLong') }}
+        <BaseButton variant="primary" size="lg" icon="mail" icon-leading :href="general">
+          {{ $t('cta.emailLong') }}
         </BaseButton>
         <BaseButton variant="ghost" size="lg" icon="arrowRight" :to="localePath('contact')">
           {{ $t('cta.visitShowroom') }}

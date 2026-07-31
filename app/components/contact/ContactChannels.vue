@@ -1,16 +1,11 @@
 <script setup lang="ts">
-// Contact channels + showroom details. Address, hours and map link come from
-// brand.config so the footer, this panel and the LocalBusiness JSON-LD all read
-// from one source.
+// Contact channels + showroom details. E-mail is the only enquiry channel, so
+// it leads. Address and hours come from brand.config, so the footer, this panel
+// and the AutoDealer JSON-LD all read from one source.
 import { brandConfig } from '~/config/brand.config'
-import { generalEnquiryLink, mailtoLink } from '~/services/whatsapp.service'
 
-const { t } = useI18n()
-const config = useRuntimeConfig()
+const { email, general } = useEnquiry()
 
-const email = computed(() => String(config.public.contactEmail))
-const waHref = computed(() => generalEnquiryLink(String(config.public.whatsapp), t('wa.enquiry.general')))
-const mailHref = computed(() => mailtoLink(email.value, t('contact.mail.subject'), t('contact.mail.body')))
 const mapsHref = computed(
   () => `https://www.google.com/maps/search/?api=1&query=${brandConfig.geo.lat},${brandConfig.geo.lng}`,
 )
@@ -18,19 +13,19 @@ const mapsHref = computed(
 
 <template>
   <div class="channels">
-    <a class="channels__card channels__card--primary" :href="waHref" target="_blank" rel="noopener noreferrer">
-      <BaseIcon name="whatsapp" :size="24" />
-      <span class="channels__label">WhatsApp</span>
-      <span class="channels__value">{{ $t('contact.channels.whatsappValue') }}</span>
-      <span class="channels__meta">{{ $t('contact.channels.whatsappMeta') }}</span>
-    </a>
-
-    <a class="channels__card" :href="mailHref">
-      <BaseIcon name="mail" :size="22" />
+    <a class="channels__card channels__card--primary" :href="general">
+      <BaseIcon name="mail" :size="24" />
       <span class="channels__label">{{ $t('contact.channels.email') }}</span>
       <span class="channels__value">{{ email }}</span>
       <span class="channels__meta">{{ $t('contact.channels.emailMeta') }}</span>
     </a>
+
+    <div class="channels__card">
+      <BaseIcon name="clock" :size="22" />
+      <span class="channels__label">{{ $t('contact.channels.hours') }}</span>
+      <span class="channels__value">{{ $t('contact.hours.weekdays') }}</span>
+      <span class="channels__meta">{{ $t('contact.hours.saturday') }} · {{ $t('contact.hours.sunday') }}</span>
+    </div>
 
     <div class="channels__card">
       <BaseIcon name="mapPin" :size="22" />
@@ -44,10 +39,10 @@ const mapsHref = computed(
     </div>
 
     <div class="channels__card">
-      <BaseIcon name="clock" :size="22" />
-      <span class="channels__label">{{ $t('contact.channels.hours') }}</span>
-      <span class="channels__value">{{ $t('contact.hours.weekdays') }}</span>
-      <span class="channels__meta">{{ $t('contact.hours.saturday') }} · {{ $t('contact.hours.sunday') }}</span>
+      <BaseIcon name="info" :size="22" />
+      <span class="channels__label">{{ $t('contact.channels.response') }}</span>
+      <span class="channels__value">{{ $t('contact.channels.responseValue') }}</span>
+      <span class="channels__meta">{{ $t('contact.channels.responseMeta') }}</span>
     </div>
   </div>
 </template>

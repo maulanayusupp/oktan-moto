@@ -16,6 +16,6 @@ const flush = computed(() => route.meta.flushHero === true)
     <slot />
   </main>
   <AppFooter />
-  <WhatsAppFab />
+  <EmailFab />
   <CompareTray />
 </template>

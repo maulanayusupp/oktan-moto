@@ -4,19 +4,13 @@
 // mobile drawer traps nothing — it is a plain panel closed by Escape, route
 // change or the toggle, which keeps focus behaviour predictable.
 import { primaryNav } from '~/config/navigation.config'
-import { generalEnquiryLink } from '~/services/whatsapp.service'
 
-const { t } = useI18n()
 const localePath = useLocalePath()
 const route = useRoute()
-const config = useRuntimeConfig()
+const { general } = useEnquiry()
 
 const scrolled = ref(false)
 const open = ref(false)
-
-const waHref = computed(() =>
-  generalEnquiryLink(String(config.public.whatsapp), t('wa.enquiry.general')),
-)
 
 function onScroll() {
   scrolled.value = window.scrollY > 24
@@ -69,12 +63,11 @@ watch(open, (value) => {
           class="desktop-only"
           variant="primary"
           size="sm"
-          icon="whatsapp"
+          icon="mail"
           icon-leading
-          :href="waHref"
-          external
+          :href="general"
         >
-          {{ $t('cta.whatsapp') }}
+          {{ $t('cta.email') }}
         </BaseButton>
 
         <button
@@ -106,8 +99,8 @@ watch(open, (value) => {
 
         <div class="drawer__footer">
           <LanguageSwitcher />
-          <BaseButton variant="primary" size="md" icon="whatsapp" icon-leading block :href="waHref" external>
-            {{ $t('cta.whatsapp') }}
+          <BaseButton variant="primary" size="md" icon="mail" icon-leading block :href="general">
+            {{ $t('cta.email') }}
           </BaseButton>
         </div>
       </div>

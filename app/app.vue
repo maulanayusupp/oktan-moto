@@ -28,7 +28,6 @@ useHead({
           url: siteUrl,
           image: `${siteUrl}/og-image.jpg`,
           email: String(config.public.contactEmail),
-          telephone: `+${config.public.whatsapp}`,
           address: {
             '@type': 'PostalAddress',
             streetAddress: t('contact.address.street'),

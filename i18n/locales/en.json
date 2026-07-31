@@ -1,7 +1,7 @@
 {
   "meta": {
     "tagline": "New & Pre-Owned Sportbike Gallery",
-    "description": "OKTAN is a curated gallery of new and pre-owned sportbikes in South Jakarta. Every unit is inspected, its history documented, its price stated openly — with enquiries handled directly over WhatsApp."
+    "description": "OKTAN is a curated gallery of new and pre-owned sportbikes in South Jakarta. Every unit is inspected, its history documented, its price stated openly — with enquiries handled by e-mail."
   },
   "common": {
     "demoShort": "Demo site: the showroom name, units, prices and histories on this page are sample data.",
@@ -29,8 +29,8 @@
     "credits": "Photo credits"
   },
   "cta": {
-    "whatsapp": "WhatsApp",
-    "whatsappLong": "Talk to us on WhatsApp",
+    "email": "Email",
+    "emailLong": "Enquire by e-mail",
     "viewUnit": "View unit",
     "browseInventory": "Browse inventory",
     "talkToUs": "Ask first",
@@ -42,7 +42,7 @@
     "band": {
       "eyebrow": "Next step",
       "title": "Found a machine worth asking about?",
-      "lead": "Send one message and you get its current condition, the inspection findings and a cost breakdown. No obligation to buy."
+      "lead": "Send one e-mail and you get its current condition, the inspection findings and a cost breakdown. No obligation to buy."
     }
   },
   "condition": {
@@ -182,7 +182,7 @@
     "hero": {
       "eyebrow": "Inventory",
       "title": "Twelve machines, one inspection standard",
-      "lead": "Compare specifications, mileage and price side by side. Flag up to three units, then continue the conversation on WhatsApp."
+      "lead": "Compare specifications, mileage and price side by side. Flag up to three units, then continue the conversation by e-mail."
     }
   },
   "compare": {
@@ -225,11 +225,9 @@
     "equipment": "Equipment",
     "about": "About this unit",
     "location": "Held at the South Jakarta showroom",
-    "responseTime": "Answered during opening hours",
+    "responseTime": "E-mail answered during opening hours",
     "paperwork": "Paperwork handled end to end",
-    "enquiryNote": "The button above opens WhatsApp with a pre-filled message. You can still edit it before sending.",
-    "mailSubject": "Enquiry: {unit}",
-    "mailBody": "Hello OKTAN,\n\nI am interested in the {unit} listed at {price}.\nUnit page: {url}\n\nCould you share its current condition and a time to inspect it?\n\nThank you.",
+    "enquiryNote": "The button above opens your mail app with a pre-filled message. You can still edit it before sending.",
     "related": {
       "eyebrow": "Alternatives",
       "title": "Other units in the same league"
@@ -252,7 +250,7 @@
   "home": {
     "meta": {
       "title": "Sportbikes, new and pre-owned, inspected and stated openly",
-      "description": "OKTAN — a new and pre-owned sportbike gallery in South Jakarta. Twelve sample units, full telemetry, an instalment estimator and enquiries over WhatsApp."
+      "description": "OKTAN — a new and pre-owned sportbike gallery in South Jakarta. Twelve sample units, full telemetry, an instalment estimator and enquiries by e-mail."
     },
     "hero": {
       "eyebrow": "Sportbike gallery · South Jakarta",
@@ -327,8 +325,8 @@
         "body": "Visit the showroom or ask for a video call. We show you the machine, the inspection findings and the documents."
       },
       "agree": {
-        "title": "Agree over WhatsApp",
-        "body": "Negotiation, payment options and cost breakdown are written in the chat so both sides hold the same record."
+        "title": "Agree by e-mail",
+        "body": "Negotiation, payment options and cost breakdown are written into the e-mail thread so both sides hold the same record."
       },
       "handover": {
         "title": "Handover",
@@ -384,7 +382,7 @@
   "faq": {
     "eyebrow": "Common questions",
     "title": "What people ask most often",
-    "lead": "Still unanswered? Send a WhatsApp message and we will reply during opening hours.",
+    "lead": "Still unanswered? Send an e-mail and we will reply during opening hours.",
     "items": {
       "inspection": {
         "q": "What exactly is checked on a pre-owned unit?",
@@ -396,7 +394,7 @@
       },
       "testRide": {
         "q": "Can I take a test ride?",
-        "a": "For pre-owned units we run the engine up to temperature and inspect it together in the showroom area. A road test depends on the unit, its documents and your licence, so please raise it on WhatsApp first."
+        "a": "For pre-owned units we run the engine up to temperature and inspect it together in the showroom area. A road test depends on the unit, its documents and your licence, so please raise it by e-mail first."
       },
       "financing": {
         "q": "Is financing available?",
@@ -408,7 +406,7 @@
       },
       "tradeIn": {
         "q": "Do you take trade-ins?",
-        "a": "We consider trade-ins on sportbikes. Send photos, mileage, year and documents over WhatsApp; the final valuation happens after a physical inspection."
+        "a": "We consider trade-ins on sportbikes. E-mail photos, mileage, year and documents; the final valuation happens after a physical inspection."
       },
       "warranty": {
         "q": "Is there a warranty?",
@@ -416,7 +414,7 @@
       },
       "foreignBuyer": {
         "q": "I am outside Jakarta or abroad — how does it work?",
-        "a": "We can run a walk-around video call and send detailed photos plus the inspection findings. Payment and delivery are arranged in stages, and every agreement stays recorded in the chat."
+        "a": "We can e-mail a walk-around video along with detailed photos and the inspection findings. Payment and delivery are arranged in stages, and every agreement stays in writing."
       }
     }
   },
@@ -478,7 +476,7 @@
         },
         "digital": {
           "title": "Digital catalogue",
-          "body": "A bilingual online catalogue with unit telemetry, comparison and WhatsApp enquiries."
+          "body": "A bilingual online catalogue with unit telemetry, comparison and e-mail enquiries."
         }
       }
     },
@@ -504,12 +502,12 @@
   "contact": {
     "meta": {
       "title": "Contact & visits",
-      "description": "Reach OKTAN over WhatsApp or email, or arrange a visit to the demonstration showroom in South Jakarta."
+      "description": "Reach OKTAN by e-mail, or arrange a visit to the demonstration showroom in South Jakarta."
     },
     "hero": {
       "eyebrow": "Contact",
       "title": "One message, a straight answer",
-      "lead": "We reply with the unit's current condition, the inspection findings and a cost breakdown. No obligation to buy."
+      "lead": "We reply with the unit’s current condition, the inspection findings and a cost breakdown. No obligation to buy."
     },
     "address": {
       "street": "Jl. Panglima Polim Raya No. 27"
@@ -521,29 +519,25 @@
       "sunday": "Closed on Sunday"
     },
     "channels": {
-      "whatsappValue": "Fastest channel",
-      "whatsappMeta": "The message is pre-filled — you only press send",
-      "email": "Email",
-      "emailMeta": "Better for long questions and document attachments",
+      "email": "E-mail",
+      "emailMeta": "Our only channel. The message arrives pre-filled — you just press send.",
+      "hours": "Opening hours",
       "showroom": "Showroom",
       "openMaps": "Open in Maps",
-      "hours": "Opening hours"
-    },
-    "mail": {
-      "subject": "Enquiry from the OKTAN website",
-      "body": "Hello OKTAN,\n\nI would like to ask about a unit listed on your website.\n\nThank you."
+      "response": "Response time",
+      "responseValue": "Within opening hours",
+      "responseMeta": "E-mail that arrives outside working hours is answered the next working day."
     },
     "form": {
       "eyebrow": "Form",
       "title": "Compose your message",
-      "lead": "Fill in the fields below, then press the button to open WhatsApp with the message already written.",
+      "lead": "Fill in the fields below, then press the button to open your mail app with the message already written.",
       "name": "Name",
       "namePlaceholder": "Your full name",
-      "phone": "WhatsApp number",
-      "phonePlaceholder": "08xxxxxxxxxx",
+      "phone": "Phone number",
+      "phonePlaceholder": "Optional, e.g. +62 21 1234 5678",
       "email": "Email",
       "emailPlaceholder": "your.name{'@'}example.com",
-      "emailHint": "Optional — add it if you would rather be answered by email.",
       "interest": "Reason",
       "interestPlaceholder": "Choose a reason",
       "interests": {
@@ -555,14 +549,15 @@
       },
       "message": "Message",
       "messagePlaceholder": "Mention the unit you are interested in, when you could visit, or your specific question.",
-      "submit": "Open WhatsApp",
-      "emailInstead": "Send by email instead",
-      "privacyNote": "This form does not send anything to our servers. Your input is only used to compose a message in the WhatsApp or email app on your own device."
+      "submit": "Open mail app",
+      "privacyNote": "This form does not send anything to our servers. Your input is only used to compose a draft in the mail app on your own device.",
+      "phoneHint": "Optional — add it if you would rather we call.",
+      "orWriteTo": "Or write directly to"
     },
     "errors": {
       "name": "Please enter your name, at least 2 characters.",
-      "phone": "That WhatsApp number looks incomplete.",
-      "email": "That email address does not look right.",
+      "phone": "That phone number looks incomplete.",
+      "email": "Please enter a valid e-mail address.",
       "message": "Please add a little more detail, at least 10 characters."
     },
     "checklist": {
@@ -573,7 +568,7 @@
         "unit": "A list of units you want to see so we can prepare them",
         "tradeIn": "Your motorcycle's documents if you are considering a trade-in"
       },
-      "note": "Unannounced visits are welcome too — some units may simply be in the inspection bay."
+      "note": "Unannounced visits are welcome too — some units may simply be in the inspection bay. E-mail ahead and yours will be ready."
     }
   },
   "compliance": {
@@ -618,6 +613,14 @@
         "body": [
           "The calculator on each unit page uses the flat-rate method with the fixed assumed rate shown on screen. The result is a rough estimate to help frame an early conversation.",
           "It is not a credit offer, not a financing approval, and it excludes administration fees, insurance, provisioning, late-payment penalties and risk assessment. The real scheme is set by a licensed finance company after a formal application."
+        ]
+      },
+      {
+        "heading": "Contact channel and communication",
+        "body": [
+          "E-mail is the only contact channel on this site. No telephone or WhatsApp number is published, so no personal number is exposed on a public page or inside the source code.",
+          "Every enquiry button, comparison action and the contact form work the same way: they compose an e-mail draft containing the unit details and its page link, then open it in your own mail app. Nothing is sent to our servers, and no message leaves your device until you press send.",
+          "For a real deployment, a business telephone number and its service hours should be published alongside the e-mail address so buyers have more than one way to reach you."
         ]
       },
       {
@@ -695,15 +698,15 @@
       {
         "heading": "Contact form",
         "body": [
-          "The form on the Contact page does not send data to our servers, because this site has no receiving endpoint. Your input is used to compose message text, which then opens in the WhatsApp app or email client on your device.",
-          "In other words, nothing moves until you press send in that app yourself. Once the message is sent, the conversation is governed by that provider's privacy policy."
+          "The form on the Contact page does not send data to our servers, because this site has no receiving endpoint. Your input is used to compose message text, which then opens as a draft in the mail app on your device.",
+          "In other words, nothing moves until you press send in that app yourself. Once the e-mail is sent, it sits in our inbox and is governed by the respective mail providers’ policies."
         ]
       },
       {
         "heading": "Third-party services",
         "body": [
-          "Font files are loaded from Google Fonts, so your IP address is visible to that service while the fonts download. All other photos, scripts and styles are served from this site's own domain.",
-          "WhatsApp links point to WhatsApp's wa.me, and map links point to Google Maps. Opening them takes you into a third-party service with its own privacy policy. We deliberately do not embed maps or videos in the pages, so no third-party cookies are set without your knowledge."
+          "Font files are loaded from Google Fonts, so your IP address is visible to that service while the fonts download. All other photos, scripts and styles are served from this site’s own domain.",
+          "Map links point to Google Maps, and e-mail links open the mail app on your device. We deliberately embed no maps, videos or chat widgets in the pages, so no third-party cookies are set without your knowledge."
         ]
       },
       {
@@ -716,8 +719,8 @@
       {
         "heading": "Your rights and contact",
         "body": [
-          "Because we hold no personal data server-side, there is no archive to request or erase. If you have sent us a WhatsApp message or an email, you can ask us to delete that conversation on our side.",
-          "Privacy questions can be sent through the channels listed on the Contact page."
+          "Because we hold no personal data server-side, there is no archive to request or erase. If you have e-mailed us, you can ask us to delete that message from our inbox.",
+          "Privacy questions can be sent to the e-mail address listed on the Contact page."
         ]
       }
     ]
@@ -817,7 +820,7 @@
     },
     "generic": {
       "title": "Something went wrong",
-      "body": "That is an error on our side. Try reloading the page, or contact us on WhatsApp if it keeps happening."
+      "body": "That is an error on our side. Try reloading the page, or e-mail us if it keeps happening."
     },
     "backHome": "Back to home"
   },
@@ -828,14 +831,6 @@
     "reach": "Reach us",
     "rights": "All rights reserved.",
     "built": "Built with Nuxt · Bahasa Indonesia & English"
-  },
-  "wa": {
-    "enquiry": {
-      "general": "Hello OKTAN, I was on your website and would like to ask about the units you have listed.",
-      "bike": "Hello OKTAN, I am interested in the %unit% (%year%) listed at %price%, odometer %mileage%.\n\nUnit page: %url%\n\nCould you share its current condition, the inspection findings, and a time to see it?",
-      "compare": "Hello OKTAN, I am comparing these units:\n\n%list%\n\nCould you advise on the condition and costs of each?",
-      "contact": "Hello OKTAN,\n\nName: %name%\nWhatsApp: %phoneNumber%\nEmail: %email%\nReason: %interest%\n\n%message%"
-    }
   },
   "bikes": {
     "ducati-panigale-v4r": {
@@ -885,6 +880,24 @@
     "ducati-multistrada-v4s": {
       "tagline": "A V4 sport tourer with semi-active suspension and adaptive cruise control.",
       "description": "The Multistrada V4 S is built for distance without abandoning sporting character: a high-output V4, semi-active suspension and rider aids including radar-based adaptive cruise control. This new unit comes with the official importer's warranty. It is the heaviest machine in this catalogue, so it suits loaded touring rather than darting through city traffic."
+    }
+  },
+  "mail": {
+    "general": {
+      "subject": "Enquiry from the OKTAN website",
+      "body": "Hello OKTAN,\n\nI was on your website and would like to ask about the units you have listed.\n\nThank you."
+    },
+    "bike": {
+      "subject": "Enquiry: %unit% (%year%)",
+      "body": "Hello OKTAN,\n\nI am interested in the %unit% (%year%) listed at %price%, odometer %mileage%.\n\nUnit page: %url%\n\nCould you share its current condition, the inspection findings, and a time to see it?\n\nThank you."
+    },
+    "compare": {
+      "subject": "Comparing several units",
+      "body": "Hello OKTAN,\n\nI am comparing these units:\n\n%list%\n\nCould you advise on the condition and costs of each?\n\nThank you."
+    },
+    "contact": {
+      "subject": "Contact form message: %name%",
+      "body": "Hello OKTAN,\n\nName: %name%\nEmail: %email%\nPhone: %phone%\nReason: %interest%\n\n%message%"
     }
   }
 }

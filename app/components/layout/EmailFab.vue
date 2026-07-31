@@ -1,26 +1,20 @@
 <script setup lang="ts">
-// Floating WhatsApp action. Present on every page because it is the checkout —
-// hidden while the compare tray is open so the two never overlap on mobile.
-import { generalEnquiryLink } from '~/services/whatsapp.service'
-
-const { t } = useI18n()
-const config = useRuntimeConfig()
+// Floating e-mail action. Present on every page because e-mail is the only
+// enquiry channel — hidden while the compare tray is open so the two never
+// overlap on mobile.
+const { general } = useEnquiry()
 const { bikes } = useCompare()
-
-const href = computed(() => generalEnquiryLink(String(config.public.whatsapp), t('wa.enquiry.general')))
 </script>
 
 <template>
   <a
     v-show="bikes.length === 0"
     class="fab"
-    :href="href"
-    target="_blank"
-    rel="noopener noreferrer"
-    :aria-label="$t('cta.whatsappLong')"
+    :href="general"
+    :aria-label="$t('cta.emailLong')"
   >
-    <BaseIcon name="whatsapp" :size="24" />
-    <span class="fab__label">{{ $t('cta.whatsapp') }}</span>
+    <BaseIcon name="mail" :size="22" />
+    <span class="fab__label">{{ $t('cta.email') }}</span>
   </a>
 </template>
 

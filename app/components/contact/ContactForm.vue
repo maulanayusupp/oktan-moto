@@ -1,14 +1,13 @@
 <script setup lang="ts">
 // Contact form with a deliberate no-server design: on submit the draft becomes a
-// pre-filled WhatsApp message (or e-mail draft) that the visitor sends from
-// their own app. Nothing is posted anywhere, which is exactly what the privacy
-// notice says — and it means no data sits on a server we do not operate.
+// pre-filled e-mail draft that the visitor sends from their own mail client.
+// Nothing is posted anywhere, which is exactly what the privacy notice says —
+// and it means no data sits on a server we do not operate.
 import { emptyDraft, isValid, validateDraft } from '~/services/contact.service'
-import { contactEnquiryLink, mailtoLink } from '~/services/whatsapp.service'
 import type { ContactErrors } from '~/types'
 
 const { t } = useI18n()
-const config = useRuntimeConfig()
+const { email, forContact } = useEnquiry()
 
 const draft = ref(emptyDraft())
 const errors = ref<ContactErrors>({})
@@ -23,6 +22,9 @@ const interests = computed(() => [
   { value: t('contact.form.interests.other'), label: t('contact.form.interests.other') },
 ])
 
+// The composed draft, also used as the plain link if JS submission is blocked.
+const mailHref = computed(() => forContact(draft.value))
+
 function onSubmit() {
   submitted.value = true
   errors.value = validateDraft(draft.value)
@@ -32,29 +34,8 @@ function onSubmit() {
     if (first && import.meta.client) document.getElementById(`contact-${first}`)?.focus()
     return
   }
-
-  const href = contactEnquiryLink(
-    String(config.public.whatsapp),
-    draft.value,
-    t('wa.enquiry.contact'),
-  )
-  if (import.meta.client) window.open(href, '_blank', 'noopener,noreferrer')
+  if (import.meta.client) window.location.href = mailHref.value
 }
-
-const mailFallback = computed(() =>
-  mailtoLink(
-    String(config.public.contactEmail),
-    t('contact.mail.subject'),
-    [
-      `${t('contact.form.name')}: ${draft.value.name}`,
-      `${t('contact.form.phone')}: ${draft.value.phone}`,
-      `${t('contact.form.email')}: ${draft.value.email}`,
-      `${t('contact.form.interest')}: ${draft.value.interest}`,
-      '',
-      draft.value.message,
-    ].join('\n'),
-  ),
-)
 
 // Live re-validation once the visitor has attempted a submit.
 watch(
@@ -79,24 +60,24 @@ watch(
         required
       />
       <BaseField
-        id="contact-phone"
-        v-model="draft.phone"
-        type="tel"
-        :label="$t('contact.form.phone')"
-        :placeholder="$t('contact.form.phonePlaceholder')"
-        :error="errors.phone ? $t(errors.phone) : undefined"
-        autocomplete="tel"
-        required
-      />
-      <BaseField
         id="contact-email"
         v-model="draft.email"
         type="email"
         :label="$t('contact.form.email')"
         :placeholder="$t('contact.form.emailPlaceholder')"
         :error="errors.email ? $t(errors.email) : undefined"
-        :hint="$t('contact.form.emailHint')"
         autocomplete="email"
+        required
+      />
+      <BaseField
+        id="contact-phone"
+        v-model="draft.phone"
+        type="tel"
+        :label="$t('contact.form.phone')"
+        :placeholder="$t('contact.form.phonePlaceholder')"
+        :error="errors.phone ? $t(errors.phone) : undefined"
+        :hint="$t('contact.form.phoneHint')"
+        autocomplete="tel"
       />
       <BaseSelect
         id="contact-interest"
@@ -120,12 +101,13 @@ watch(
     <DemoNotice message-key="contact.form.privacyNote" />
 
     <div class="form__actions">
-      <BaseButton type="submit" variant="primary" size="lg" icon="whatsapp" icon-leading>
+      <BaseButton type="submit" variant="primary" size="lg" icon="mail" icon-leading>
         {{ $t('contact.form.submit') }}
       </BaseButton>
-      <BaseButton variant="ghost" size="lg" icon="mail" icon-leading :href="mailFallback">
-        {{ $t('contact.form.emailInstead') }}
-      </BaseButton>
+      <p class="form__address">
+        {{ $t('contact.form.orWriteTo') }}
+        <a :href="mailHref">{{ email }}</a>
+      </p>
     </div>
   </form>
 </template>
@@ -151,6 +133,24 @@ watch(
 .form__actions {
   display: flex;
   flex-wrap: wrap;
-  gap: $space-3;
+  align-items: center;
+  gap: $space-3 $space-4;
+}
+
+.form__address {
+  font-size: 0.84rem;
+  color: $titanium;
+
+  a {
+    color: $chalk;
+    border-bottom: 1px solid rgba($ignition, 0.6);
+    overflow-wrap: anywhere;
+
+    @include hover {
+      color: $ignition;
+    }
+
+    @include focus-visible;
+  }
 }
 </style>
